@@ -168,6 +168,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | RNF-002 | ter uma aba de avaliações dos locais        | ALTA     |
 | RNF-002 |  O usuário pode recomendar pistas de skate para o site    | BAIXA      |
 | RF-001 |  O usuário pode ver ciclovias e pista de skates   | ALTA      |
+| RNF-002 |  O usuário pode comentar  pistas e ciclovias  de skate para o site    | BAIXA      |
 
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
