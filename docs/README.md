@@ -155,15 +155,20 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 | ID     | Descrição do Requisito                                   | Prioridade |
 | ------ | ---------------------------------------------------------- | ---------- |
-| RF-001 | Permitir que o usuário cadastre tarefas ⚠️ EXEMPLO ⚠️ | ALTA       |
-| RF-002 | Emitir um relatório de tarefas no mês ⚠️ EXEMPLO ⚠️ | MÉDIA     |
+| RF-001 | Permitir que o usuário se cadastre e faça loggin  | ALTA      |
+| RF-002 |Mostrar várias ciclovias para prática de esporte  | MÉDIA     |
+| RF-001 | Ter integração com o OpenStreetMap | ALTA      |
+
 
 ### Requisitos não Funcionais
 
 | ID      | Descrição do Requisito                                                              | Prioridade |
 | ------- | ------------------------------------------------------------------------------------- | ---------- |
-| RNF-001 | O sistema deve ser responsivo para rodar em um dispositivos móvel ⚠️ EXEMPLO ⚠️ | MÉDIA     |
-| RNF-002 | Deve processar requisições do usuário em no máximo 3s ⚠️ EXEMPLO ⚠️          | BAIXA      |
+| RNF-001 | O sistema deve ser responsivo  | MÉDIA     |
+| RNF-002 | ter uma aba de avaliações dos locais        | ALTA     |
+| RNF-002 |  O usuário pode recomendar pistas de skate para o site    | BAIXA      |
+| RF-001 |  O usuário pode ver ciclovias e pista de skates   | ALTA      |
+
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
