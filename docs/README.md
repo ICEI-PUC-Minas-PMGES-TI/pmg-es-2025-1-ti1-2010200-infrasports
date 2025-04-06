@@ -85,7 +85,14 @@ Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa
 
 ## Etapa de Entendimento
 
-**✳️✳️✳️ APRESENTE OS ARTEFATOS DA ETAPA  ✳️✳️✳️**
+**✳️✳️✳️ ![image](https://github.com/user-attachments/assets/2b4a97a6-00a7-4320-aa78-1d67e9ecff7b)
+![image](https://github.com/user-attachments/assets/d2167f4c-ee9e-4d9a-9012-2600b1f7b462)
+![image](https://github.com/user-attachments/assets/8350e3af-cc30-479d-a258-567930bf3c27)
+![image](https://github.com/user-attachments/assets/1f74a7b2-5612-4476-ad05-e9bce91dff8c)
+
+
+
+ ✳️✳️✳️**
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
