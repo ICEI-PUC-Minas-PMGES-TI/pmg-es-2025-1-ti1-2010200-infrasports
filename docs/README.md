@@ -3,7 +3,7 @@
 Informações básicas do projeto.
 
 * **Projeto:** InfraSports
-* **Repositório GitHub:** [LINK PARA O REPOSITÓRIO NO GITHUB]
+* **Repositório GitHub:** https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2025-1-ti1-2010200-infrasports
 * **Membros da equipe:**
 
   * [Fulano](https://github.com/fulano) ⚠️ EXEMPLO ⚠️
