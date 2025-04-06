@@ -176,11 +176,15 @@ Estes são os protótipos de telas do sistema.
 
 **✳️✳️✳️ COLOQUE AQUI OS PROTÓTIPOS DE TELAS COM TÍTULO E DESCRIÇÃO ✳️✳️✳️**
 
-##### TELA XPTO ⚠️ EXEMPLO ⚠️
 
-Descrição para a tela XPTO
+![image](https://github.com/user-attachments/assets/437a6d34-34f2-45ed-8b8c-63199e4aa2d6)
+![image](https://github.com/user-attachments/assets/7ca8fa16-f23e-47e8-bbfc-3229d3668ea5)
+![image](https://github.com/user-attachments/assets/975b155e-aad8-4e8d-8af5-0f38c03f7691)
+![image](https://github.com/user-attachments/assets/05551ff5-44e4-41f6-88a7-5ab2843196b8)
 
-![Exemplo de wireframe](images/exemplo-wireframe.png)
+
+
+
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
