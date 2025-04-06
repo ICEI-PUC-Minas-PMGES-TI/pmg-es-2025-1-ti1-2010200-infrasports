@@ -139,9 +139,14 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 
 **✳️✳️✳️ APRESENTE O DIAGRAMA DA PROPOSTA DE VALOR PARA CADA PERSONA ✳️✳️✳️**
 
-##### Proposta para Persona XPTO ⚠️ EXEMPLO ⚠️
+![image](https://github.com/user-attachments/assets/b1250459-61f1-4948-b9bd-002b8ce8447c) 
+![image](https://github.com/user-attachments/assets/1d1d5fae-68f1-4cfd-b17a-d5d80f4c2acd)
+![image](https://github.com/user-attachments/assets/a0df948a-f226-474e-b325-e8c4c4874dd3)
+![image](https://github.com/user-attachments/assets/5b38574f-3462-406f-9a11-2f1aa8983e9e)
 
-![Exemplo de proposta de valor](images/exemplo-proposta-valor.png)
+
+
+
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
