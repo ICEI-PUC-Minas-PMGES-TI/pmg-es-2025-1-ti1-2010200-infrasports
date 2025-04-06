@@ -6,9 +6,9 @@ Informações básicas do projeto.
 * **Repositório GitHub:** https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2025-1-ti1-2010200-infrasports
 * **Membros da equipe:**
 
-  * [João Lucca Alves Setragni](https://github.com/joaosetragni) ⚠️ EXEMPLO ⚠️
-  * [Ian Marco de Faria Barbosa](https://github.com/IanMarcoDeFariaBarbosa) ⚠️ EXEMPLO ⚠️
-  * [Gabriel de Sousa Carvalho Ferreira](https://github.com/cicrano) ⚠️ EXEMPLO ⚠️
+  * [João Lucca Alves Setragni](https://github.com/joaosetragni) 
+  * [Ian Marco de Faria Barbosa](https://github.com/IanMarcoDeFariaBarbosa) 
+  * [Gabriel de Sousa Carvalho Ferreira](https://github.com/cicrano) 
   * [Gabriel de Sousa Carvalho FerreiraJoão Pedro Bandeira Ribas](https://github.com/JpBandeira24)
   * [vinicus daniel santos](https://github.com/vinid38)
 
