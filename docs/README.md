@@ -9,8 +9,8 @@ Informações básicas do projeto.
   * [João Lucca Alves Setragni](https://github.com/fulano) ⚠️ EXEMPLO ⚠️
   * [Ian Marco de Faria Barbosa](https://github.com/beltrano) ⚠️ EXEMPLO ⚠️
   * [Gabriel de Sousa Carvalho Ferreira](https://github.com/cicrano) ⚠️ EXEMPLO ⚠️
-  * [Gabriel de Sousa Carvalho FerreiraJoão Pedro Bandeira Ribas]
-  * [vinicus daniel santos]
+  * [Gabriel de Sousa Carvalho FerreiraJoão Pedro Bandeira Ribas)
+  * [vinicus daniel santos)
 
 A documentação do projeto é estruturada da seguinte forma:
 
