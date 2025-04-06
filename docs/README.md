@@ -42,7 +42,7 @@ Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa
 
 ## Objetivos
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+**✳️✳️✳️O objetivo do trabalho e criar um site que apresenta um mapa mostrando vários locais de onde a pessoa pode achar pistas de skates ciclovias fazer review sobre esse locais ✳️✳️✳️**
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
@@ -54,7 +54,7 @@ Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa
 
 ## Justificativa
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+**✳️✳️✳️ Pensamos na criação deste site, pois muitas pessoas que  são novas e uma cidade e são praticantes de esportes a acabam tendo dificuldade para achar locais onde praticar esses  esportes mais específicos, além de muitas pessoas que apenas não são por  onde começar  ✳️✳️✳️**
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
@@ -68,7 +68,7 @@ Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa
 
 ## Público-Alvo
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+**✳️✳️✳️O nosso público alvo são pessoas fitness e pessoas que praticam  esportes apenas por diversão  ✳️✳️✳️**
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
