@@ -132,8 +132,8 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 | --------------------- | ------------------------------------------ | -------------------------------------- |
 | usuário fitness   | encontrar academias e áreas ao ar livre próximas | PARA poder treinar mesmo quando estiver fora da minha rotina normal
 
-             |
-| ciclist   | QUERO visualizar ciclovias e trilhas seguras no mapa      | PARA planejar meus treinos e pedais com mais segurança |
+           |
+| ciclista   | QUERO visualizar ciclovias e trilhas seguras no mapa      | PARA planejar meus treinos e pedais com mais segurança |
 | skatista |QUERO saber onde existem pistas de skate na minha cidade   | PARA praticar com segurança e encontrar outros skatistas |
 | usuário do site      | QUERO salvar meus locais favoritos      | PARA acessar rapidamente quando quiser treinar lá novamente |
 
