@@ -109,6 +109,24 @@ Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa
 
 **✳️✳️✳️ APRESENTE OS DIAGRAMAS DE PERSONAS ✳️✳️✳️**
 
+
+![image](https://github.com/user-attachments/assets/c718ca37-f3e8-4a06-bcb1-952535050061)
+
+Nos resolveríamos o problema dele, pois nosso site vai mostras os locais onde ele praticar o esporte desejado .
+
+![image](https://github.com/user-attachments/assets/f9f82eaa-5f28-4ae1-b006-9f102435f0b9)
+
+nos resolveríamos o problema dele, pois nosso site vai mostras os locais onde ele pode pode praticar skate.
+
+![image](https://github.com/user-attachments/assets/a2688368-faa4-4fbe-bf0e-96b029afb411)
+
+nos resolveríamos o problema dele, pois nosso site vai mostras os locais onde ele praticara academia que eledesejado .
+
+
+
+
+
+
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
 > Relacione as personas identificadas no seu projeto e os respectivos mapas de empatia. Lembre-se que você deve ser enumerar e descrever precisamente e de forma personalizada todos os principais envolvidos com a solução almeja.
