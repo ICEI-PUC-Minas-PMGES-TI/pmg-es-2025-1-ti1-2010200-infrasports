@@ -6,9 +6,11 @@ Informações básicas do projeto.
 * **Repositório GitHub:** https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2025-1-ti1-2010200-infrasports
 * **Membros da equipe:**
 
-  * [Fulano](https://github.com/fulano) ⚠️ EXEMPLO ⚠️
-  * [Beltrano](https://github.com/beltrano) ⚠️ EXEMPLO ⚠️
-  * [Cicrano](https://github.com/cicrano) ⚠️ EXEMPLO ⚠️
+  * [João Lucca Alves Setragni](https://github.com/fulano) ⚠️ EXEMPLO ⚠️
+  * [Ian Marco de Faria Barbosa](https://github.com/beltrano) ⚠️ EXEMPLO ⚠️
+  * [Gabriel de Sousa Carvalho Ferreira](https://github.com/cicrano) ⚠️ EXEMPLO ⚠️
+  * [Gabriel de Sousa Carvalho FerreiraJoão Pedro Bandeira Ribas]
+  * [vinicus daniel santos]
 
 A documentação do projeto é estruturada da seguinte forma:
 
