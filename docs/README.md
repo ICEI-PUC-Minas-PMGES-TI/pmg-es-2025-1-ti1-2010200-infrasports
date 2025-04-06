@@ -163,6 +163,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | RF-001 | Permitir que o usuário se cadastre e faça loggin  | ALTA      |
 | RF-002 |Mostrar várias ciclovias para prática de esporte  | MÉDIA     |
 | RF-001 | Ter integração com o OpenStreetMap | ALTA      |
+| RF-001 | o site  deve funcionar 24 horas por dia | ALTA      |
+
 
 
 ### Requisitos não Funcionais
