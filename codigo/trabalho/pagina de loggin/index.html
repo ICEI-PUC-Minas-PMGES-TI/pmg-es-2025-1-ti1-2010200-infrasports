@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Infra Esporte - Login</title>
+  <link rel="stylesheet" href="io.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+<body>
+  <div class="page-container">
+    <div class="left-side">
+      <div class="logo">infra esporte</div>
+      <div class="login-box">
+        <span class="material-icons user-icon">person</span>
+        <h2 class="login-title">Login</h2>
+        <form id="form">
+          <input type="text" id="username" placeholder="Usuário" required />
+          <input type="password" id="password" placeholder="Senha" required />
+          <button type="submit" id="submit-btn">Entrar</button>
+        </form>
+        <div class="forgot-password">
+          <a href="forgot-password.html">Esqueci a senha</a>
+        </div>
+        <div class="login-buttons">
+          <button onclick="location.href='forgot-password.html'">Esqueci a senha</button>
+          <button onclick="location.href='register.html'">Cadastrar</button>
+        </div>
+      </div>
+    </div>
+    <div class="right-side">
+    </div>
+  </div>
+  <script src="java.js"></script>
+</body>
+</html>
