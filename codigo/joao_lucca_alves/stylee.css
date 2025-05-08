@@ -71,7 +71,6 @@ h1 {
     border-radius: 50%;
 }
 
-/* Estilos para o mapa */
 .ciclovia {
     stroke: #27ae60;
     stroke-width: 5;
@@ -89,4 +88,116 @@ h1 {
     background-color: #e74c3c;
     border-radius: 50%;
     border: 3px solid white;
+}
+
+.cabecalho {
+    background: linear-gradient(135deg, #e67e22, #d35400);
+    color: black;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.cabecalho .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo i {
+    font-size: 2rem;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.logo h1 span {
+    font-weight: 300;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.menu a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: opacity 0.3s;
+}
+
+.menu a:hover {
+    opacity: 0.8;
+}
+
+.menu i {
+    font-size: 1.1rem;
+}
+
+.destaque {
+    background-color: rgba(0,0,0,0.1);
+    padding: 20px 0;
+}
+
+.destaque h2 {
+    margin: 0 0 5px 0;
+    font-size: 1.4rem;
+}
+
+.destaque p {
+    margin: 0;
+    opacity: 0.9;
+}
+
+.rodape {
+    background: linear-gradient(135deg, #d35400, #e67e22);
+    color: black;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+.rodape .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 15px;
+}
+
+.redes-sociais a {
+    color: black;
+    font-size: 1.2rem;
+    transition: transform 0.3s;
+}
+
+.redes-sociais a:hover {
+    transform: translateY(-3px);
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
 }
