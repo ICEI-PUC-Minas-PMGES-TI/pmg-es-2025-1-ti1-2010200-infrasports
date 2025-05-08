@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cadastro - Infra Esporte</title>
+  <link rel="stylesheet" href="io.css" />
+</head>
+<body>
+  <div class="page-container" style="justify-content: center; align-items: center;">
+    <div class="register-box">
+      <h2>Cadastro</h2>
+      <form id="register-form">
+        <input type="text" id="new-username" placeholder="Usuário" required />
+        <input type="email" id="new-email" placeholder="E-mail" required />
+        <input type="password" id="new-password" placeholder="Senha" required />
+        <input type="password" id="confirm-password" placeholder="Confirmar Senha" required />
+        <button type="submit">Cadastrar</button>
+      </form>
+    </div>
+  </div>
+  <script>
+    document.getElementById('register-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const username = document.getElementById('new-username').value.trim();
+      const email = document.getElementById('new-email').value.trim();
+      const password = document.getElementById('new-password').value.trim();
+      const confirmPassword = document.getElementById('confirm-password').value.trim();
+
+      if (!username || !email || !password || !confirmPassword) {
+        alert('Por favor, preencha todos os campos.');
+        return;
+      }
+      if (password !== confirmPassword) {
+        alert('As senhas não coincidem.');
+        return;
+      }
+      alert(`Conta criada para ${username}!`);
+      this.reset();
+    });
+  </script>
+</body>
+</html>
