@@ -120,7 +120,7 @@ pontosInteresse.forEach(ponto => {
         className: `ponto-${ponto.tipo}`
     }).bindPopup(`<b>${ponto.nome}</b><br>${
         ponto.tipo === "parque" ? "Parque" : 
-        ponto.tipo === "praca" ? "Praça" : "Estádio"
+        ponto.tipo === "praca" ? "Praça" : "Pontos Turísticos"
     }`)
      .addTo(camadas["Pontos Turísticos"]);
 });
