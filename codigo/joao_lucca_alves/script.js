@@ -1,13 +1,13 @@
-// Mapa centralizado em BH com zoom adequado
+// Configuração inicial do mapa
 const map = L.map('map').setView([-19.9167, -43.9345], 13);
 
-// Mapa base com mais contraste
+// Camada base do mapa (OpenStreetMap)
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    maxZoom: 18,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    maxZoom: 18
 }).addTo(map);
 
-// Principais ciclovias de BH
+// Dados completos das ciclovias
 const cicloviasBH = [
     {
         nome: "Ciclovia Av. Antônio Carlos",
@@ -33,7 +33,6 @@ const cicloviasBH = [
             [-19.8500, -43.9800], [-19.8520, -43.9780],
             [-19.8540, -43.9760], [-19.8560, -43.9740]]
     },
-    
     {
         nome: "Ciclovia Av. do Contorno",
         coordenadas: [
@@ -54,7 +53,7 @@ const cicloviasBH = [
     }
 ];
 
-// Estações Bike BH 
+// Estações Bike BH completas
 const estacoesBikeBH = [
     {nome: "Estação Praça Sete", coordenadas: [-19.9200, -43.9380]},
     {nome: "Estação Savassi", coordenadas: [-19.9390, -43.9380]},
@@ -68,80 +67,76 @@ const estacoesBikeBH = [
     {nome: "Estação Praça do Papa", coordenadas: [-19.9500, -43.9300]}
 ];
 
-// Outros pontos importantes
+// Pontos turísticos com classificação correta
 const pontosInteresse = [
-    {nome: "Parque Municipal", coordenadas: [-19.9250, -43.9350], tipo: "Parque"},
-    {nome: "Praça da Liberdade", coordenadas: [-19.9310, -43.9350], tipo: "Ponto Turístico"},
-    {nome: "Mineirão", coordenadas: [-19.8650, -43.9710], tipo: "Estádio"}
+    {nome: "Parque Municipal", coordenadas: [-19.9250, -43.9350], tipo: "pontosInteresse"},
+    {nome: "Praça da Liberdade", coordenadas: [-19.9310, -43.9350], tipo: "pontosInteresse"},
+    {nome: "Mineirão", coordenadas: [-19.8650, -43.9710], tipo: "pontosInteresse"}
 ];
 
-// Cria grupos de camadas
+// Definição de camadas
 const camadas = {
     "Ciclovias": L.layerGroup(),
     "Estações Bike BH": L.layerGroup(),
     "Pontos Turísticos": L.layerGroup()
 };
 
-// Adiciona ciclovias ao mapa e ao grupo de camadas
+// Paleta de cores para os elementos
+const cores = {
+    ciclovias: "#4CAF50",       // Verde
+    estacoes: "#0066CC",        // Azul
+    pontosInteresse: "#FF0000"  // Vermelho
+};
+
+// Adiciona ciclovias
 cicloviasBH.forEach(ciclovia => {
-    const polyline = L.polyline(ciclovia.coordenadas, {
-        className: 'ciclovia',
-        weight: 5
-    }).bindPopup(`<b>${ciclovia.nome}</b>`);
-    
-    polyline.addTo(camadas["Ciclovias"]);
+    L.polyline(ciclovia.coordenadas, {
+        color: cores.ciclovias,
+        weight: 5,
+        className: 'ciclovia'
+    }).bindPopup(`<b>${ciclovia.nome}</b>`)
+     .addTo(camadas["Ciclovias"]);
 });
 
 // Adiciona estações Bike BH
 estacoesBikeBH.forEach(estacao => {
-    const marker = L.circleMarker(estacao.coordenadas, {
-        className: 'estacao-bikebh',
-        radius: 8,
-        fillOpacity: 0.9
-    }).bindPopup(`<b>${estacao.nome}</b><br>Estação Bike BH`);
-    
-    marker.addTo(camadas["Estações Bike BH"]);
+    L.circleMarker(estacao.coordenadas, {
+        color: cores.estacoes,
+        fillColor: `${cores.estacoes}80`,
+        radius: 6,
+        fillOpacity: 0.9,
+        className: 'estacao-bike'
+    }).bindPopup(`<b>${estacao.nome}</b><br>Estação Bike BH`)
+     .addTo(camadas["Estações Bike BH"]);
 });
 
-// Adiciona outros pontos importantes
+// Adiciona pontos turísticos
 pontosInteresse.forEach(ponto => {
-    const marker = L.circleMarker(ponto.coordenadas, {
-        className: 'ponto-interesse',
-        radius: 8,
-        fillOpacity: 0.9
-    }).bindPopup(`<b>${ponto.nome}</b><br>${ponto.tipo}`);
-    
-    marker.addTo(camadas["Pontos Turísticos"]);
+    L.circleMarker(ponto.coordenadas, {
+        color: cores[ponto.tipo],
+        fillColor: `${cores[ponto.tipo]}80`,
+        radius: ponto.tipo === "estadio" ? 10 : 8,
+        fillOpacity: 0.9,
+        className: `ponto-${ponto.tipo}`
+    }).bindPopup(`<b>${ponto.nome}</b><br>${
+        ponto.tipo === "parque" ? "Parque" : 
+        ponto.tipo === "praca" ? "Praça" : "Estádio"
+    }`)
+     .addTo(camadas["Pontos Turísticos"]);
 });
 
-// Adiciona todas as camadas ao mapa inicialmente
+// Adiciona todas as camadas ao mapa
 camadas["Ciclovias"].addTo(map);
 camadas["Estações Bike BH"].addTo(map);
 camadas["Pontos Turísticos"].addTo(map);
 
-// Adiciona controle de camadas
+// Controle de camadas
 L.control.layers(null, camadas, {collapsed: false}).addTo(map);
 
-// Ajusta o zoom para mostrar todas as features
+// Ajuste de zoom para mostrar todos os elementos
 setTimeout(() => {
-    const bounds = new L.LatLngBounds();
-    
-    // Adiciona todas as coordenadas das ciclovias
-    cicloviasBH.forEach(ciclovia => {
-        ciclovia.coordenadas.forEach(coord => {
-            bounds.extend(coord);
-        });
-    });
-    
-    // Adiciona todas as estações
-    estacoesBikeBH.forEach(estacao => {
-        bounds.extend(estacao.coordenadas);
-    });
-    
-    // Adiciona todos os pontos de interesse
-    pontosInteresse.forEach(ponto => {
-        bounds.extend(ponto.coordenadas);
-    });
-    
+    const bounds = L.latLngBounds(
+        [...cicloviasBH.flatMap(c => c.coordenadas), ...estacoesBikeBH.map(e => e.coordenadas), ...pontosInteresse.map(p => p.coordenadas)]
+    );
     map.fitBounds(bounds.pad(0.1));
 }, 100);
