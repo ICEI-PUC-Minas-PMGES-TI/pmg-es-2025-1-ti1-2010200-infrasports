@@ -3,28 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <title>InfraSport - Avaliação</title>
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
+    <!-- Área do logo -->
     <div class="logo-area">
       <div class="logo">
-        <img src="img/Logo_InfraSports-sem fundo.png" alt="Logo InfraSport"> 
-        <h1><span>Infra</span>Sport</h1>
+        <img src="img/Logo_InfraSports-sem fundo.png" alt="Logo InfraSport">
+        <h1><span>Infra</span>Sports</h1>
       </div>
     </div>
 
+    <!-- Área da avaliação -->
     <div class="avaliacao-area">
       <h2>Deixe sua Avaliação</h2>
 
       <div class="estrelas">
-        ★ ★ ★ ★ ★
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
       </div>
 
       <div class="comentario-box">
-        <label>Usuário</label>
-        <textarea placeholder="Comente..."></textarea>
-        <button>Confirmar</button>
+        <label for="comentario">Usuário</label>
+        <textarea id="comentario" placeholder="Comente..."></textarea>
+        <button id="confirmar">Confirmar</button>
       </div>
 
       <div class="avaliacoes">
@@ -42,5 +48,7 @@
       </div>
     </div>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
