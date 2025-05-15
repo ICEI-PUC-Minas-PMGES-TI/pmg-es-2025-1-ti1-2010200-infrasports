@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #c8b49b;
+  height: 100vh;
+  display: flex;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.logo-area {
+  width: 40%;
+  background: linear-gradient(to right, #3a9cbf 75%, transparent 0%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo img {
+  width: 150px;
+  height: 150px;
+}
+
+.logo h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+.logo h1 span {
+  color: #f47c2c;
+}
+
+.avaliacao-area {
+  width: 60%;
+  background-color: #e0e0e0;
+  padding: 30px 20px;
+  border-radius: 10px;
+  margin: auto;
+  max-width: 350px;
+}
+
+.avaliacao-area h2 {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.estrelas {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.estrelas span {
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.2s;
+}
+
+.estrelas span.ativa {
+  color: #ffc107;
+}
+
+.comentario-box {
+  margin-bottom: 20px;
+}
+
+.comentario-box label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+textarea {
+  width: 100%;
+  height: 70px;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  resize: none;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #f47c2c;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.avaliacoes {
+  margin-top: 20px;
+}
+
+.avaliacao {
+  background-color: #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.avaliacao label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.avaliacao p {
+  font-size: 14px;
+  margin-top: 5px;
+}

@@ -1,11 +1,54 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avaliações</title>
+  <meta charset="UTF-8">
+  <title>InfraSport - Avaliação</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+  <div class="container">
+    <!-- Área do logo -->
+    <div class="logo-area">
+      <div class="logo">
+        <img src="img/Logo_InfraSports-sem fundo.png" alt="Logo InfraSport">
+        <h1><span>Infra</span>Sports</h1>
+      </div>
+    </div>
+
+    <!-- Área da avaliação -->
+    <div class="avaliacao-area">
+      <h2>Deixe sua Avaliação</h2>
+
+      <div class="estrelas">
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+      </div>
+
+      <div class="comentario-box">
+        <label for="comentario">Usuário</label>
+        <textarea id="comentario" placeholder="Comente..."></textarea>
+        <button id="confirmar">Confirmar</button>
+      </div>
+
+      <div class="avaliacoes">
+        <div class="avaliacao">
+          <label>Usuário</label>
+          <div class="estrelas">★ ★ ★ ★ ★</div>
+          <p>Avaliação...</p>
+        </div>
+
+        <div class="avaliacao">
+          <label>Usuário</label>
+          <div class="estrelas">★ ★ ★</div>
+          <p>Avaliação...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
