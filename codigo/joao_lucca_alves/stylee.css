@@ -201,3 +201,15 @@ h1 {
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
     border-radius: 10px;
 }
+
+.legenda {
+    display: none;
+}
+
+.cabecalho {
+    margin-bottom: 90px;
+}
+
+.rodape {
+    margin-top: 90px;
+}
