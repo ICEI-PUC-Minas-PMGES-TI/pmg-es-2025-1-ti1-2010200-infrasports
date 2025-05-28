@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Films GO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .info-box {
+            background-color: #1c1c1c;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 600px;
+        }
+        .typing {
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: .15em solid #ff0000;
+            animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+            font-size: 1.5rem;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #ff0000; }
+        }
+    </style>
+</head>
+<body>
+    <div class="info-box">
+        <h1 class="text-danger mb-4">About Films GO</h1>
+        <p class="typing">
+            Films GO é seu destino definitivo para descobrir e explorar os melhores filmes! 🎬
+        </p>
+        <a href="index.html" class="btn btn-danger mt-4">Back to Home</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
