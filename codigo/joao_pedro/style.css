@@ -1,3 +1,4 @@
+/* ==================== RESET ==================== */
 * {
   margin: 0;
   padding: 0;
@@ -7,69 +8,133 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #c8b49b;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
+  color: #2c3e50;
 }
 
+/* ==================== CABEÇALHO ==================== */
+.cabecalho {
+  background: linear-gradient(135deg, #e67e22, #d35400);
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cabecalho .container {
+  background: white;
+  border-radius: 10px;
+  padding: 10px 25px;
+  max-width: 1200px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo i {
+  font-size: 1.6rem;
+  color: black;
+}
+
+.logo h1 {
+  font-size: 1.3rem;
+  margin: 0;
+  color: #2c3e50;
+}
+
+.logo h1 span {
+  font-weight: 300;
+  color: #f47c2c;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.menu a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: opacity 0.3s;
+}
+
+.menu a:hover,
+.menu a:focus {
+  opacity: 0.8;
+  outline: none;
+}
+
+.menu i {
+  font-size: 1.1rem;
+}
+
+/* ==================== AVALIAÇÃO ==================== */
 .container {
   display: flex;
   width: 100%;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
 }
 
 .logo-area {
   width: 40%;
+  min-width: 280px;
   background: linear-gradient(to right, #3a9cbf 75%, transparent 0%);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px;
 }
 
-.logo {
-  text-align: center;
+.logo-area .logo {
+  flex-direction: column;
+  align-items: center;
 }
 
-.logo img {
+.logo-area .logo img {
   width: 150px;
   height: 150px;
+  object-fit: contain;
 }
 
-.logo h1 {
+.logo-area .logo h1 {
   font-size: 28px;
   color: #000;
-}
-
-.logo h1 span {
-  color: #f47c2c;
+  margin-top: 10px;
 }
 
 .avaliacao-area {
   width: 60%;
+  max-width: 400px;
   background-color: #e0e0e0;
   padding: 30px 20px;
   border-radius: 10px;
   margin: auto;
-  max-width: 350px;
+  display: flex;
+  flex-direction: column;
 }
 
 .avaliacao-area h2 {
   color: #333;
-  font-size: 20px;
+  font-size: 22px;
   margin-bottom: 15px;
-}
-
-.estrelas {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.estrelas span {
-  cursor: pointer;
-  color: #ccc;
-  transition: color 0.2s;
-}
-
-.estrelas span.ativa {
-  color: yellow;
+  text-align: center;
 }
 
 .comentario-box {
@@ -79,27 +144,64 @@ body {
 .comentario-box label {
   display: block;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin: 10px 0 5px;
 }
 
+input[type="text"],
 textarea {
   width: 100%;
-  height: 70px;
   padding: 8px;
   border: none;
   border-radius: 5px;
-  resize: none;
   margin-bottom: 10px;
+  font-size: 14px;
+}
+
+textarea {
+  height: 70px;
+  resize: none;
+}
+
+.estrelas {
+  font-size: 24px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.estrelas span {
+  cursor: pointer;
+  color: #ccc;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.estrelas span.ativa {
+  color: #f1c40f;
+}
+
+.estrelas span:hover {
+  transform: scale(1.2);
 }
 
 button {
   background-color: #f47c2c;
   color: white;
   border: none;
-  padding: 8px 15px;
+  padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
+  font-size: 15px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #d65e00;
+}
+
+button:focus {
+  outline: 2px solid #f47c2c;
+  outline-offset: 2px;
 }
 
 .avaliacoes {
@@ -122,4 +224,72 @@ button {
 .avaliacao p {
   font-size: 14px;
   margin-top: 5px;
+}
+
+/* ==================== RODAPÉ ==================== */
+.rodape {
+  background: linear-gradient(135deg, #d35400, #e67e22);
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: auto;
+}
+
+.rodape .container {
+  background: white;
+  border-radius: 10px;
+  max-width: 1200px;
+  width: 90%;
+  padding: 15px 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.rodape p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.redes-sociais {
+  display: flex;
+  gap: 15px;
+}
+
+.redes-sociais a {
+  color: black;
+  font-size: 1.2rem;
+  transition: transform 0.3s;
+}
+
+.redes-sociais a:hover {
+  transform: translateY(-3px);
+}
+
+/* ==================== RESPONSIVO ==================== */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-area,
+  .avaliacao-area {
+    width: 100%;
+  }
+
+  .cabecalho .container,
+  .rodape .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
