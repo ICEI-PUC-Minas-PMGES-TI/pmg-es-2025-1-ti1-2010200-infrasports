@@ -25,7 +25,7 @@
 
   <main>
     <h2>Cadastro de treino: Ciclistas</h2>
-    <form class="form-box">
+    <form class="form-box" id="form-treino">
       <label>Título do treino
         <input type="text" name="titulo" placeholder="Ex: Treino de resistência" required>
       </label>
@@ -65,6 +65,11 @@
 
       <button type="submit">Cadastrar Treino</button>
     </form>
+
+    <!-- Mensagem de sucesso -->
+    <div id="msg-sucesso" style="display:none; color: green; margin-top: 15px; font-weight: bold;">
+      Treino cadastrado com sucesso!
+    </div>
   </main>
 
   <footer class="rodape">
@@ -77,5 +82,7 @@
       </div>
     </div>
   </footer>
+
+  <script src="cadas.js"></script>
 </body>
 </html>
