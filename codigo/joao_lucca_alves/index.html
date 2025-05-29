@@ -38,9 +38,20 @@
             <div class="legenda-item"><span class="cor-ciclovia"></span> Ciclovias</div>
             <div class="legenda-item"><span class="cor-bikebh"></span> Estações Bike BH</div>
             <div class="legenda-item"><span class="cor-ponto"></span> Pontos Turísticos</div>
+            
         </div>
     </div>
+    
+    
+    <div id="filtros" style="padding: 10px; background: white; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.2); position: absolute; top: 10px; left: 10px; z-index: 1000; font-family: Arial;">
+            <label><input type="checkbox" id="filtro-ciclovias" checked> Ciclovias</label><br>
+            <label><input type="checkbox" id="filtro-estacoes" checked> Estações Bike BH</label><br>
+            <label><input type="checkbox" id="filtro-pontos" checked> Pontos Turísticos</label><br><br>
+            <button onclick="aplicarFiltros()">Aplicar Filtros</button>
+            <button onclick="limparFiltros()">Limpar Filtros</button>
+    </div>
 
+    
     <footer class="rodape">
         <div class="container">
             <p>© 2025 InfraSports | Prefeitura de Belo Horizonte | Secretaria de Mobilidade Urbana</p>
