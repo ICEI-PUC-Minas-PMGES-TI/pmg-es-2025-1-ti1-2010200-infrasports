@@ -1,0 +1,70 @@
+{
+    "movies": [
+    {
+    "id": 1,
+    "titulo": "The Shawshank Redemption",
+    "descricao": "1994 • Drama • 2h 22m",
+    "conteudo": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+    "categoria": "Drama",
+    "autor": "Frank Darabont",
+    "data": "1994-09-23",
+    "imagem": "https://upload.wikimedia.org/wikipedia/en/8/81/ShawshankRedemptionMoviePoster.jpg",
+    "wiki": "https://en.wikipedia.org/wiki/The_Shawshank_Redemption"
+    },
+    {
+    "id": 2,
+    "titulo": "The Godfather",
+    "descricao": "1972 • Crime • 2h 55m",
+    "conteudo": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+    "categoria": "Crime",
+    "autor": "Francis Ford Coppola",
+    "data": "1972-03-24",
+    "imagem": "https://upload.wikimedia.org/wikipedia/en/1/1c/Godfather_ver1.jpg",
+    "wiki": "https://en.wikipedia.org/wiki/The_Godfather"
+    },
+    {
+    "id": 3,
+    "titulo": "Pulp Fiction",
+    "descricao": "1994 • Crime • 2h 34m",
+    "conteudo": "The lives of two mob hitmen, a boxer, a gangster's wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+    "categoria": "Crime",
+    "autor": "Quentin Tarantino",
+    "data": "1994-10-14",
+    "imagem": "https://upload.wikimedia.org/wikipedia/en/8/82/Pulp_Fiction_cover.jpg",
+    "wiki": "https://en.wikipedia.org/wiki/Pulp_Fiction"
+    },
+    {
+    "id": 4,
+    "titulo": "The Dark Knight",
+    "descricao": "2008 • Action • 2h 32m",
+    "conteudo": "When the menace known as the Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham.",
+    "categoria": "Action",
+    "autor": "Christopher Nolan",
+    "data": "2008-07-18",
+    "imagem": "https://m.media-amazon.com/images/I/51EbJjlL7PL.AC.jpg",
+    "wiki": "https://en.wikipedia.org/wiki/The_Dark_Knight_(film)"
+    },
+    {
+    "id": 5,
+    "titulo": "Fight Club",
+    "descricao": "1999 • Drama • 2h 19m",
+    "conteudo": "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into something much more.",
+    "categoria": "Drama",
+    "autor": "David Fincher",
+    "data": "1999-10-15",
+    "imagem": "https://upload.wikimedia.org/wikipedia/en/f/fc/Fight_Club_poster.jpg",
+    "wiki": "https://en.wikipedia.org/wiki/Fight_Club"
+    },
+    {
+    "id": 6,
+    "titulo": "Inception",
+    "descricao": "2010 • Sci-Fi • 2h 28m",
+    "conteudo": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea.",
+    "categoria": "Sci-Fi",
+    "autor": "Christopher Nolan",
+    "data": "2010-07-16",
+    "imagem": "https://m.media-amazon.com/images/I/51s+6q6QG-L.AC.jpg",
+    "wiki": "https://en.wikipedia.org/wiki/Inception"
+    }
+    ]
+    }
