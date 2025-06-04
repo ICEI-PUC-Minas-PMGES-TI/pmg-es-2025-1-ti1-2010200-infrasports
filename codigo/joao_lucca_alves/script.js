@@ -215,3 +215,52 @@ legend.onAdd = function(map) {
 };
 
 legend.addTo(map);
+
+// Função de busca
+document.getElementById('search-input').addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+        const termo = this.value.trim().toLowerCase();
+
+        if (!termo) return;
+
+        let encontrado = false;
+
+        // 1. Busca em ciclovias
+        for (const ciclovia of cicloviasBH) {
+            if (ciclovia.nome.toLowerCase().includes(termo)) {
+                const bounds = L.latLngBounds(ciclovia.coordenadas);
+                map.fitBounds(bounds.pad(0.2));
+                encontrado = true;
+                break;
+            }
+        }
+
+        // 2. Busca em estações
+        if (!encontrado) {
+            for (const estacao of estacoesBikeBH) {
+                if (estacao.nome.toLowerCase().includes(termo)) {
+                    map.setView(estacao.coordenadas, 17);
+                    encontrado = true;
+                    break;
+                }
+            }
+        }
+
+        // 3. Busca em pontos turísticos
+        if (!encontrado) {
+            for (const ponto of pontosInteresse) {
+                if (ponto.nome.toLowerCase().includes(termo)) {
+                    map.setView(ponto.coordenadas, 17);
+                    encontrado = true;
+                    break;
+                }
+            }
+        }
+
+        // Alerta se nada for encontrado
+        if (!encontrado) {
+            alert('Nenhum resultado encontrado para: ' + this.value);
+        }
+    }
+});
+
