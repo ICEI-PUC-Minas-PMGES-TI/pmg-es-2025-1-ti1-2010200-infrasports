@@ -15,71 +15,49 @@ body {
 }
 
 /* ==================== CABEÇALHO ==================== */
-.cabecalho {
-  background: linear-gradient(135deg, #e67e22, #d35400);
-  padding: 20px 0;
-  display: flex;
-  justify-content: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.cabecalho .container {
-  background: white;
-  border-radius: 10px;
-  padding: 10px 25px;
-  max-width: 1200px;
-  width: 90%;
+.navbar {
+  background-color: #e1690f;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.logo {
+.nav-left {
+  background: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
-.logo i {
-  font-size: 1.6rem;
-  color: black;
+.logo-text {
+  color: #1a1a1a;
+  font-weight: bold;
+  font-size: 16px;
 }
 
-.logo h1 {
-  font-size: 1.3rem;
-  margin: 0;
-  color: #2c3e50;
-}
-
-.logo h1 span {
-  font-weight: 300;
-  color: #f47c2c;
-}
-
-.menu ul {
-  display: flex;
+.nav-right {
   list-style: none;
+  display: flex;
   gap: 20px;
+  background: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
 }
 
-.menu a {
-  color: black;
+.nav-right li a {
   text-decoration: none;
-  font-weight: 500;
+  color: #000;
+  font-size: 14px;
   display: flex;
   align-items: center;
   gap: 5px;
-  transition: opacity 0.3s;
 }
 
-.menu a:hover,
-.menu a:focus {
-  opacity: 0.8;
-  outline: none;
-}
-
-.menu i {
-  font-size: 1.1rem;
+.nav-right li a:hover {
+  text-decoration: underline;
 }
 
 /* ==================== AVALIAÇÃO ==================== */

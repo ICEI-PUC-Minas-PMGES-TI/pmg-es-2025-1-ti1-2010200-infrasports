@@ -1,0 +1,28 @@
+{
+  "espacos": [
+    {
+      "id": 1,
+      "nome": "Parque das Mangabeiras",
+      "descricao": "Trilha asfaltada com cerca de 3km, ideal para corrida e caminhada.",
+      "tipo": "Trilha para Corrida",
+      "localizacao": "Belo Horizonte - MG",
+      "horario_funcionamento": "06:00 às 20:00",
+      "avaliacao": 4.7,
+      "infraestrutura": ["Estacionamento", "Bebedouro", "Banheiros", "Iluminação noturna"],
+      "acessibilidade": ["Rampa de acesso", "Piso tátil", "Banheiro adaptado"],
+     "imagem": "assets/img/parque-mangabeiras.jpg"
+    },
+    {
+      "id": 2,
+      "nome": "Praça JK",
+      "descricao": "Área ao ar livre com barras para exercícios de calistenia e treinos funcionais.",
+      "tipo": "Espaço Funcional",
+      "localizacao": "Belo Horizonte - MG",
+      "horario_funcionamento": "24 horas",
+      "avaliacao": 4.5,
+      "infraestrutura": ["Barras fixas", "Área gramada", "Iluminação pública"],
+      "acessibilidade": ["Caminhos nivelados"],
+      "imagem": "assets/img/praca-jk.jpg"
+    }
+  ]
+}
