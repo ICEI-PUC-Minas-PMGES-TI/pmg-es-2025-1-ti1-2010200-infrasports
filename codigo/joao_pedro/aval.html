@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>InfraSport - Avaliação</title>
-  <link rel="stylesheet" href="aval.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="aval.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
 </head>
-<body>
 
+<body>
   <!-- Cabeçalho -->
-   <header>
+  <header>
     <nav class="navbar">
       <div class="nav-left">
         <i class="fas fa-bicycle"></i>
@@ -28,7 +31,10 @@
   <main class="container">
     <div class="logo-area">
       <div class="logo">
-        <img src="img/Logo_InfraSports-sem fundo.png" alt="Logotipo da InfraSports com ícone de bicicleta">
+        <img
+          src="img/Logo_InfraSports-sem fundo.png"
+          alt="Logotipo da InfraSports com ícone de bicicleta"
+        />
         <h2><span>Infra</span>Sports</h2>
       </div>
     </div>
@@ -37,22 +43,27 @@
       <h2>Deixe sua Avaliação</h2>
 
       <div class="comentario-box">
-        <label for="usuario">Usuário</label>
-        <input type="text" id="usuario" placeholder="Digite seu nome">
+        <label for="usuario">Nome</label>
+        <input type="text" id="usuario" placeholder="Digite seu nome" />
 
         <label for="comentario">Comentário</label>
-        <textarea id="comentario" placeholder="Escreva sua avaliação..."></textarea>
+        <textarea
+          id="comentario"
+          placeholder="Escreva sua avaliação..."
+          rows="4"
+          required
+        ></textarea>
       </div>
 
-      <div class="estrelas">
-        <span>★</span>
-        <span>★</span>
-        <span>★</span>
-        <span>★</span>
-        <span>★</span>
+      <div class="estrelas" role="radiogroup" aria-label="Avaliação por estrelas">
+        <button type="button" aria-label="1 estrela" class="estrela" data-valor="1">★</button>
+        <button type="button" aria-label="2 estrelas" class="estrela" data-valor="2">★</button>
+        <button type="button" aria-label="3 estrelas" class="estrela" data-valor="3">★</button>
+        <button type="button" aria-label="4 estrelas" class="estrela" data-valor="4">★</button>
+        <button type="button" aria-label="5 estrelas" class="estrela" data-valor="5">★</button>
       </div>
 
-      <button id="confirmar">Confirmar</button>
+      <button id="confirmar" disabled>Confirmar</button>
 
       <div class="avaliacoes"></div>
     </div>
@@ -61,7 +72,10 @@
   <!-- Rodapé -->
   <footer class="rodape">
     <div class="container rodape-container">
-      <p>© 2025 InfraSports | Prefeitura de Belo Horizonte | Secretaria de Mobilidade Urbana</p>
+      <p>
+        © 2025 InfraSports | Prefeitura de Belo Horizonte |
+        Secretaria de Mobilidade Urbana
+      </p>
       <div class="redes-sociais">
         <a href="#"><i class="fab fa-facebook"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
