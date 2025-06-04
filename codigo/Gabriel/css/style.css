@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #fcfbfb;
+}
+
+main {
+    max-width: 800px;
+    margin: auto;
+    background: #f3bb62;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+p, ul {
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin-top: 20px;
+    color: #2c3e50;
+}
+.espaco {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+header {
+    background-color: #ee9300; /* 🟡 Troque essa cor por qualquer uma que quiser */
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: white; /* Cor do texto */
+    margin: 0;
+    font-size: 28px;
+}
+#estrela-avaliacao {
+    font-size: 20px;
+    margin-left: 5px;
+    color: gold; /* tom base */
+    transition: filter 0.3s ease;
+}
