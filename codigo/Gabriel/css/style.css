@@ -53,3 +53,43 @@ header h1 {
     color: gold; /* tom base */
     transition: filter 0.3s ease;
 }
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.slide-imagem {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.botao-slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.botao-slide.esquerda {
+    left: 10px;
+}
+
+.botao-slide.direita {
+    right: 10px;
+}
+
+.botao-slide:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
