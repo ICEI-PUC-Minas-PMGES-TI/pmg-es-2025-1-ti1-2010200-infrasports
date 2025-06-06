@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Local</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="cabecalho">
+    <div class="container">
+      <div class="logo">
+        <i class="fas fa-map-marker-alt"></i>
+        <h1>Cadastro <span>de Local</span></h1>
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+          <li><a href="mapa.html"><i class="fas fa-map"></i> Mapa</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="container">
+    <h1>Cadastre um novo local</h1>
+    <form id="form-local">
+      <label for="nome">Nome do Local *</label>
+      <input type="text" id="nome" required />
+
+      <label for="endereco">Endereço *</label>
+      <input type="text" id="endereco" required />
+
+      <label for="tipo">Tipo de Espaço *</label>
+      <select id="tipo" required>
+        <option value="">Selecione</option>
+        <option value="Quadra">Quadra</option>
+        <option value="Campo">Campo</option>
+        <option value="Ginásio">Ginásio</option>
+        <option value="Outro">Outro</option>
+      </select>
+
+      <label for="descricao">Descrição</label>
+      <textarea id="descricao" rows="4"></textarea>
+
+      <label for="horario">Horário de Funcionamento *</label>
+      <input type="text" id="horario" required placeholder="Ex: 08:00 - 18:00" />
+
+      <label for="imagem">Imagem do Local (URL)</label>
+      <input type="url" id="imagem" placeholder="https://..." />
+      <div id="preview-container">
+        <img id="preview" style="display:none; width: 100%; max-height: 250px; object-fit: cover; border-radius: 8px; margin-top: 10px;" />
+      </div>
+
+      <label for="contato">Contato *</label>
+      <input type="text" id="contato" required placeholder="Telefone ou Email" />
+
+      <button type="submit">Cadastrar</button>
+      <p id="mensagem-sucesso" class="mensagem-sucesso"></p>
+    </form>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="rodape">
+    <div class="container">
+      <p>&copy; 2025 Projeto de Locais. Todos os direitos reservados.</p>
+      <div class="redes-sociais">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- Script -->
+  <script>
+    const imagemInput = document.getElementById('imagem');
+    const preview = document.getElementById('preview');
+    const mensagem = document.getElementById('mensagem-sucesso');
+
+    imagemInput.addEventListener('input', () => {
+      const url = imagemInput.value;
+      if (url) {
+        preview.src = url;
+        preview.style.display = 'block';
+      } else {
+        preview.style.display = 'none';
+      }
+    });
+
+    document.getElementById('form-local').addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const local = {
+        nome: document.getElementById('nome').value.trim(),
+        endereco: document.getElementById('endereco').value.trim(),
+        tipo: document.getElementById('tipo').value,
+        descricao: document.getElementById('descricao').value.trim(),
+        horario: document.getElementById('horario').value.trim(),
+        imagem: document.getElementById('imagem').value.trim(),
+        contato: document.getElementById('contato').value.trim()
+      };
+
+      if (!local.nome || !local.endereco || !local.tipo || !local.horario || !local.contato) {
+        alert('Preencha todos os campos obrigatórios!');
+        return;
+      }
+
+      const locais = JSON.parse(localStorage.getItem('locais')) || [];
+      locais.push(local);
+      localStorage.setItem('locais', JSON.stringify(locais));
+
+      mensagem.textContent = 'Local cadastrado com sucesso!';
+      e.target.reset();
+      preview.style.display = 'none';
+
+      setTimeout(() => mensagem.textContent = '', 3000);
+    });
+  </script>
+</body>
+</html>
+\
