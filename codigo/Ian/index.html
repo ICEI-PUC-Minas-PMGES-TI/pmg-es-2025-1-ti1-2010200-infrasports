@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
+<head> 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cadastro de Local</title>
@@ -9,10 +9,12 @@
 </head>
 <body>
 
+  <!-- Cabeçalho -->
+
   <header class="cabecalho">
     <div class="container">
       <div class="logo">
-        <h1>Cadastro <span>de Local</span></h1>
+        <h1>Cadastro de Local</h1>
       </div>
       <nav class="menu">
         <ul>
@@ -24,12 +26,14 @@
     </div>
   </header>
 
+    <!-- Conteúdo principal -->
+
   <main class="container">
     <h1>Cadastrar Novo Local</h1>
     <form id="form-local">
       <label for="nome">Nome do local *</label>
       <input type="text" id="nome" required />
-
+      
       <label for="endereco">Endereço *</label>
       <input type="text" id="endereco" required />
 
@@ -62,15 +66,17 @@
     </form>
   </main>
 
+    <!-- Rodapé -->
   <footer class="rodape">
     <div class="container">
-      <p>&copy; 2025 Seu Projeto — Todos os direitos reservados</p>
+      <p>&copy; 2025 Projeto de Locais. Todos os direitos reservados.</p>
       <div class="redes-sociais">
-        <a href="#"><i class="fa fa-facebook"></i></a>
-        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
   </footer>
+
 
   <script>
     const form = document.getElementById('form-local');
@@ -137,5 +143,114 @@
       }
     });
   </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Descrição do Local - Personalizada</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .cabecalho, .rodape {
+      background-color: #ff6f00;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .rodape {
+      border-radius: 0 0 10px 10px;
+      font-size: 14px;
+      margin-top: 30px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-top: 30px;
+      color: #ff6f00;
+    }
+
+    .descricao {
+      background-color: #fdf0e6;
+      border-left: 5px solid #ff6f00;
+      padding: 15px;
+      font-family: monospace;
+      white-space: pre-wrap;
+    }
+
+    .importante {
+      background-color: #fff3cd;
+      border-left: 5px solid #ffc107;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="cabecalho">
+      <h1>✏ Tarefa: Personalize a Descrição do Local</h1>
+    </div>
+
+    <p>
+      Agora que você já tem um modelo de descrição, sua tarefa é criar uma nova versão personalizada, substituindo o exemplo original por um conteúdo próprio.
+    </p>
+
+    <h2>🧾 Nova Descrição Criada:</h2>
+    <div class="descricao">
+Parque natural com lago artificial e pista circular de 1,5km, ideal para caminhadas e piqueniques. O local possui áreas gramadas e espaços sombreados por árvores.
+
+Tipo: Parque Urbano  
+Localização: Campinas - SP  
+Horário de Funcionamento: 05:00 às 21:00  
+
+Infraestrutura:  
+✓ Estacionamento  
+✓ Bebedouro  
+✓ Banheiros  
+✓ Área para piquenique  
+✓ Iluminação noturna  
+
+Acessibilidade:  
+✓ Rampa de acesso  
+✓ Piso tátil nas entradas principais  
+✓ Banheiro adaptado
+    </div>
+
+    <div class="importante">
+      <strong>➡ Importante:</strong> Use um espaço real ou fictício, mas mantenha todas as informações completas e úteis para quem vai utilizar o local.
+    </div>
+
+    <div class="rodape">
+      © 2025 - Cadastro de Locais
+    </div>
+  </div>
+
 </body>
 </html>
