@@ -1,132 +1,140 @@
-/* Reset básico */
+/* Reset */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Segoe UI', Roboto, sans-serif;
-    background: #fcfbfb;
+    background: linear-gradient(to bottom right, #fff7ec, #fefefe);
     color: #2c3e50;
-    line-height: 1.6;
     padding: 20px;
+    overflow-x: hidden;
 }
 
 header {
-    background-color: #ee9300;
+    background: linear-gradient(135deg, #ee9300, #ffae42);
+    color: white;
     text-align: center;
-    padding: 25px;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-    transition: background-color 0.3s ease;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    margin-bottom: 40px;
+    animation: fadeIn 1s ease-in-out;
 }
 
 header h1 {
-    color: white;
-    font-size: 2rem;
+    font-size: 2.4rem;
+    letter-spacing: 1px;
 }
 
 main {
     max-width: 960px;
     margin: auto;
-    background: #fefefe;
     padding: 30px;
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+    animation: slideIn 0.8s ease;
 }
 
-/* Campo de busca */
+/* Pesquisa */
 .pesquisa-container {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 #busca {
     width: 80%;
     max-width: 500px;
-    padding: 12px 18px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 50px;
     font-size: 16px;
-    border: 2px solid #ee9300;
-    border-radius: 30px;
-    outline: none;
-    transition: 0.3s ease;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
 }
 
 #busca:focus {
-    border-color: #ffad33;
-    box-shadow: 0 0 8px rgba(238, 147, 0, 0.4);
+    outline: none;
+    box-shadow: 0 0 0 3px #ee930060;
 }
 
-/* Card de espaço */
+/* Card com Glassmorphism e Hover */
 .espaco {
-    background: #fff;
-    border-radius: 16px;
-    padding: 20px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeInUp 0.6s ease;
 }
 
 .espaco:hover {
-    transform: scale(1.02);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
 
 .espaco h2 {
     color: #ee9300;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    font-size: 1.5rem;
 }
 
 .espaco p {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .espaco a {
     display: inline-block;
-    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: linear-gradient(to right, #ee9300, #ffb347);
+    color: white;
+    font-weight: bold;
     text-decoration: none;
-    background: #ee9300;
-    color: #fff;
-    padding: 10px 16px;
-    border-radius: 8px;
-    transition: background 0.3s ease;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .espaco a:hover {
-    background: #ffad33;
+    transform: scale(1.05);
+    background: linear-gradient(to right, #ffb347, #ee9300);
 }
 
 /* Imagens */
 img {
     max-width: 100%;
-    border-radius: 12px;
+    border-radius: 16px;
     margin-bottom: 20px;
 }
 
-/* Texto dos detalhes */
+/* Detalhes */
 h3 {
     margin-top: 20px;
     color: #ee9300;
 }
 
-/* Avaliação com estrela */
+/* Estrela com Glow */
 #estrela-avaliacao {
-    font-size: 20px;
-    margin-left: 5px;
+    font-size: 22px;
     color: gold;
-    transition: filter 0.3s ease;
+    filter: drop-shadow(0 0 4px gold);
 }
 
-/* Slideshow */
+/* Slideshow com indicadores */
 .slideshow-container {
     position: relative;
-    max-width: 600px;
-    margin: 30px auto;
+    max-width: 640px;
+    margin: 40px auto;
+    border-radius: 16px;
     overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 .slide-imagem {
@@ -138,13 +146,14 @@ h3 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
     border: none;
-    padding: 10px 14px;
-    font-size: 20px;
+    padding: 12px;
+    font-size: 22px;
     cursor: pointer;
     border-radius: 50%;
+    z-index: 10;
     transition: background 0.3s;
 }
 
@@ -158,4 +167,20 @@ h3 {
 
 .botao-slide.direita {
     right: 10px;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
