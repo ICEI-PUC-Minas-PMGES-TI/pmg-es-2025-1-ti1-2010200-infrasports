@@ -1,71 +1,136 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #fcfbfb;
-}
-
-main {
-    max-width: 800px;
-    margin: auto;
-    background: #f3bb62;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 10px;
-}
-
-p, ul {
-    margin-bottom: 10px;
-}
-
-h3 {
-    margin-top: 20px;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background: #fcfbfb;
     color: #2c3e50;
-}
-.espaco {
-    background-color: #ffffff;
-    border-radius: 10px;
+    line-height: 1.6;
     padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+
 header {
-    background-color: #ee9300; /* 🟡 Troque essa cor por qualquer uma que quiser */
+    background-color: #ee9300;
     text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: background-color 0.3s ease;
 }
 
 header h1 {
-    color: white; /* Cor do texto */
-    margin: 0;
-    font-size: 28px;
+    color: white;
+    font-size: 2rem;
 }
+
+main {
+    max-width: 960px;
+    margin: auto;
+    background: #fefefe;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Campo de busca */
+.pesquisa-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#busca {
+    width: 80%;
+    max-width: 500px;
+    padding: 12px 18px;
+    font-size: 16px;
+    border: 2px solid #ee9300;
+    border-radius: 30px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+#busca:focus {
+    border-color: #ffad33;
+    box-shadow: 0 0 8px rgba(238, 147, 0, 0.4);
+}
+
+/* Card de espaço */
+.espaco {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.espaco:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.espaco h2 {
+    color: #ee9300;
+    margin-bottom: 10px;
+}
+
+.espaco p {
+    margin-bottom: 10px;
+}
+
+.espaco a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    background: #ee9300;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.espaco a:hover {
+    background: #ffad33;
+}
+
+/* Imagens */
+img {
+    max-width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+/* Texto dos detalhes */
+h3 {
+    margin-top: 20px;
+    color: #ee9300;
+}
+
+/* Avaliação com estrela */
 #estrela-avaliacao {
     font-size: 20px;
     margin-left: 5px;
-    color: gold; /* tom base */
+    color: gold;
     transition: filter 0.3s ease;
 }
+
+/* Slideshow */
 .slideshow-container {
     position: relative;
-    width: 100%;
     max-width: 600px;
-    margin: 20px auto;
-    border-radius: 10px;
+    margin: 30px auto;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
 }
 
 .slide-imagem {
     width: 100%;
-    height: auto;
     display: block;
 }
 
@@ -73,13 +138,18 @@ header h1 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 10px 15px;
-    font-size: 24px;
+    padding: 10px 14px;
+    font-size: 20px;
     cursor: pointer;
     border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.botao-slide:hover {
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .botao-slide.esquerda {
@@ -88,20 +158,4 @@ header h1 {
 
 .botao-slide.direita {
     right: 10px;
-}
-
-.botao-slide:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-.pesquisa-container {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#busca {
-    width: 60%;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
 }
