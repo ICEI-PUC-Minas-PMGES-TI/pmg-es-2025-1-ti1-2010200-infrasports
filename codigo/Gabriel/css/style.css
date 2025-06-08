@@ -93,3 +93,15 @@ header h1 {
 .botao-slide:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
+.pesquisa-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#busca {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
