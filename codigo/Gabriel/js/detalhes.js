@@ -22,9 +22,70 @@ const espacos = [
         infraestrutura: ["Barras fixas", "Área gramada", "Iluminação pública"],
         acessibilidade: ["Caminhos nivelados"],
         imagem: "assets/img/praca-jk.jpg"
+    },
+    {
+        id: 3,
+        nome: "Parque Municipal Américo Renné Giannetti",
+        tipo: "Parque Urbano",
+        descricao: "Tradicional parque com lago, áreas de caminhada e ambiente arborizado no centro de BH.",
+        localizacao: "Centro - BH",
+        horario_funcionamento: "06:00 às 18:00",
+        avaliacao: 4.6,
+        infraestrutura: ["Lago", "Pista de caminhada", "Playground", "Área verde"],
+        acessibilidade: ["Calçadas acessíveis", "Rampas", "Sinalização tátil"],
+        imagem: "assets/img/parque-municipal.jpg"
+    },
+    {
+        id: 4,
+        nome: "Praça da Liberdade",
+        tipo: "Praça",
+        descricao: "Espaço arborizado com jardins planejados, perfeito para caminhadas tranquilas e lazer.",
+        localizacao: "Savassi - BH",
+        horario_funcionamento: "06:00 às 22:00",
+        avaliacao: 4.8,
+        infraestrutura: ["Jardins", "Bancos", "Pista de caminhada", "Iluminação"],
+        acessibilidade: ["Piso tátil", "Banheiro adaptado", "Rampas de acesso"],
+        imagem: "assets/img/praca-liberdade.jpg"
+    },
+    {
+        id: 5,
+        nome: "Parque Ecológico da Pampulha",
+        tipo: "Parque Ecológico",
+        descricao: "Ampla área verde com lagoa, trilhas e espaços para piquenique na região da Pampulha.",
+        localizacao: "Pampulha - BH",
+        horario_funcionamento: "08:30 às 17:00",
+        avaliacao: 4.4,
+        infraestrutura: ["Trilhas", "Área de piquenique", "Lagoa", "Estacionamento"],
+        acessibilidade: ["Rampas", "Sinalização visual", "Pisos nivelados"],
+        imagem: "assets/img/parque-pampulha.jpg"
+    },
+    {
+        id: 6,
+        nome: "Mirante do Mangabeiras",
+        tipo: "Mirante",
+        descricao: "Ponto turístico com vista panorâmica da cidade e ambiente propício para relaxamento.",
+        localizacao: "Mangabeiras - BH",
+        horario_funcionamento: "09:00 às 18:00",
+        avaliacao: 4.9,
+        infraestrutura: ["Mirante", "Café", "Segurança", "Banheiros"],
+        acessibilidade: ["Elevador de acesso", "Banheiro adaptado"],
+        imagem: "assets/img/mirante-mangabeiras.jpg"
+    },
+    {
+        id: 7,
+        nome: "Parque Jacques Cousteau",
+        tipo: "Parque de Bairro",
+        descricao: "Parque com vegetação nativa, pista para caminhada e equipamentos de ginástica.",
+        localizacao: "Betânia - BH",
+        horario_funcionamento: "07:00 às 18:00",
+        avaliacao: 4.3,
+        infraestrutura: ["Equipamentos de ginástica", "Pista de caminhada", "Área verde"],
+        acessibilidade: ["Caminhos acessíveis", "Rampa de acesso"],
+        imagem: "assets/img/parque-jacques.jpg"
     }
 ];
 
+// O restante do seu código permanece inalterado...
 const params = new URLSearchParams(window.location.search);
 const id = parseInt(params.get('id'));
 const espaco = espacos.find(e => e.id === id);
@@ -50,7 +111,6 @@ if (espaco) {
         estrela.style.filter = "brightness(0.4)";
     }
 
-    // Infraestrutura
     const listaInfra = document.getElementById('infraestrutura-espaco');
     espaco.infraestrutura.forEach(item => {
         const li = document.createElement('li');
@@ -58,7 +118,6 @@ if (espaco) {
         listaInfra.appendChild(li);
     });
 
-    // Acessibilidade
     const listaAcess = document.getElementById('acessibilidade-espaco');
     espaco.acessibilidade.forEach(item => {
         const li = document.createElement('li');
@@ -66,7 +125,6 @@ if (espaco) {
         listaAcess.appendChild(li);
     });
 
-    // Slide somente para o Parque das Mangabeiras
     if (espaco.id === 1) {
         const imagensSlide = [
             "assets/img/prq das mangabeiras ft1.jpg",
@@ -78,7 +136,7 @@ if (espaco) {
         let indiceSlide = 0;
         const imgSlide = document.getElementById('imagem-slide');
         const containerSlide = document.getElementById('slideshow');
-        containerSlide.style.display = "block"; // Mostra o slide
+        containerSlide.style.display = "block";
 
         function mostrarSlide(indice) {
             if (indice < 0) {

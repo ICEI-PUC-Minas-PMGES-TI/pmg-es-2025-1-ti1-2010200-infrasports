@@ -10,7 +10,7 @@
       "avaliacao": 4.7,
       "infraestrutura": ["Estacionamento", "Bebedouro", "Banheiros", "Iluminação noturna"],
       "acessibilidade": ["Rampa de acesso", "Piso tátil", "Banheiro adaptado"],
-     "imagem": "assets/img/parque-mangabeiras.jpg"
+      "imagem": "assets/img/parque-mangabeiras.jpg"
     },
     {
       "id": 2,
@@ -23,6 +23,66 @@
       "infraestrutura": ["Barras fixas", "Área gramada", "Iluminação pública"],
       "acessibilidade": ["Caminhos nivelados"],
       "imagem": "assets/img/praca-jk.jpg"
+    },
+    {
+      "id": 3,
+      "nome": "Parque Municipal Américo Renné Giannetti",
+      "descricao": "Tradicional parque com lago, áreas de caminhada e ambiente arborizado no centro de BH.",
+      "tipo": "Parque Urbano",
+      "localizacao": "Centro - Belo Horizonte - MG",
+      "horario_funcionamento": "06:00 às 17:00",
+      "avaliacao": 4.6,
+      "infraestrutura": ["Playground", "Lanchonete", "Pedalinhos", "Banheiros"],
+      "acessibilidade": ["Rampa de acesso", "Banheiro adaptado"],
+      "imagem": "assets/img/parque-municipal.jpg"
+    },
+    {
+      "id": 4,
+      "nome": "Praça da Liberdade",
+      "descricao": "Espaço arborizado com jardins planejados, perfeito para caminhadas tranquilas e lazer.",
+      "tipo": "Praça",
+      "localizacao": "Savassi - Belo Horizonte - MG",
+      "horario_funcionamento": "06:00 às 22:00",
+      "avaliacao": 4.8,
+      "infraestrutura": ["Bancos", "Iluminação pública", "Wi-Fi", "Jardins"],
+      "acessibilidade": ["Caminhos nivelados", "Sinalização tátil"],
+      "imagem": "assets/img/praca-liberdade.jpg"
+    },
+    {
+      "id": 5,
+      "nome": "Parque Ecológico da Pampulha",
+      "descricao": "Ampla área verde com lagoa, trilhas e espaços para piquenique na região da Pampulha.",
+      "tipo": "Parque Ecológico",
+      "localizacao": "Pampulha - Belo Horizonte - MG",
+      "horario_funcionamento": "08:00 às 17:00 (ter a dom)",
+      "avaliacao": 4.3,
+      "infraestrutura": ["Trilhas", "Quiosques", "Banheiros", "Estacionamento"],
+      "acessibilidade": ["Rampa de acesso", "Estacionamento reservado"],
+      "imagem": "assets/img/parque-pampulha.jpg"
+    },
+    {
+      "id": 6,
+      "nome": "Mirante do Mangabeiras",
+      "descricao": "Ponto turístico com vista panorâmica da cidade e ambiente propício para relaxamento.",
+      "tipo": "Mirante",
+      "localizacao": "Serra do Curral - Belo Horizonte - MG",
+      "horario_funcionamento": "09:00 às 18:00",
+      "avaliacao": 4.9,
+      "infraestrutura": ["Deck de madeira", "Segurança", "Banheiros"],
+      "acessibilidade": ["Rampas largas", "Corrimãos"],
+      "imagem": "assets/img/mirante-mangabeiras.jpg"
+    },
+    {
+      "id": 7,
+      "nome": "Parque Jacques Cousteau",
+      "descricao": "Parque com vegetação nativa, pista para caminhada e equipamentos de ginástica.",
+      "tipo": "Parque de Bairro",
+      "localizacao": "Betânia - Belo Horizonte - MG",
+      "horario_funcionamento": "07:00 às 18:00",
+      "avaliacao": 4.4,
+      "infraestrutura": ["Academia ao ar livre", "Trilhas", "Banheiros"],
+      "acessibilidade": ["Piso tátil", "Área plana"],
+      "imagem": "assets/img/parque-jacques.jpg"
     }
   ]
 }
