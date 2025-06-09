@@ -16,11 +16,26 @@ document.addEventListener("DOMContentLoaded", function () {
       observacoes: form.observacoes.value
     };
 
-    const treinosSalvos = JSON.parse(localStorage.getItem("treinos")) || [];
-    treinosSalvos.push(treino);
-    localStorage.setItem("treinos", JSON.stringify(treinosSalvos));
-
-    alert("Treino cadastrado com sucesso!");
-    form.reset();
+    fetch("http://localhost:3000/treinos", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(treino)
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Erro ao salvar treino.");
+        }
+        return response.json();
+      })
+      .then(data => {
+        alert("Treino cadastrado com sucesso!");
+        form.reset();
+      })
+      .catch(error => {
+        console.error("Erro:", error);
+        alert("Falha ao cadastrar o treino.");
+      });
   });
 });
