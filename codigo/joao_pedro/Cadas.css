@@ -38,6 +38,8 @@ h2 {
 label {
   font-weight: bold;
   margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
 }
 
 input, textarea {
@@ -59,7 +61,7 @@ input, textarea {
   min-width: 200px;
 }
 
-.btn-submit {
+button[type="submit"] {
   background-color: #e1690f;
   color: white;
   border: none;
@@ -67,10 +69,21 @@ input, textarea {
   border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
-.btn-submit:hover {
+button[type="submit"]:hover {
   background-color: #d45c00;
+}
+
+/* Mensagem de sucesso */
+#msg-sucesso {
+  display: none;
+  color: green;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 1rem;
 }
 
 /* NAVBAR */
