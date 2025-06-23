@@ -3,16 +3,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
-    font-family: 'Segoe UI', Roboto, sans-serif;
     background: linear-gradient(to bottom right, #fff7ec, #fefefe);
     color: #2c3e50;
     padding: 20px;
     overflow-x: hidden;
 }
 
+/* Cabeçalho geral */
 header {
     background: linear-gradient(135deg, #ee9300, #ffae42);
     color: white;
@@ -29,6 +30,7 @@ header h1 {
     letter-spacing: 1px;
 }
 
+/* Container principal */
 main {
     max-width: 960px;
     margin: auto;
@@ -114,6 +116,17 @@ img {
     margin-bottom: 20px;
 }
 
+/* Imagem dos espaços no index */
+.imagem-espaco {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
 /* Detalhes */
 h3 {
     margin-top: 20px;
@@ -169,6 +182,39 @@ h3 {
     right: 10px;
 }
 
+/* Logo - tela inicial (pequena) */
+.logo-pequena {
+    height: 24px;
+    width: auto;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    opacity: 0.7;
+    z-index: 1000;
+}
+
+/* Logo - detalhes (maior e discreta no header) */
+.logo-detalhes {
+    height: 100px;
+    width: auto;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    opacity: 0.9;
+}
+
+/* Temperatura na página detalhes */
+.info-temperatura {
+    margin-top: 30px;
+    padding: 15px;
+    background: rgba(238, 147, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(238, 147, 0, 0.2);
+    color: #ee9300;
+    font-weight: 600;
+    max-width: 320px;
+}
+
 /* Animações */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-20px); }
@@ -184,62 +230,91 @@ h3 {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .logo-pequena {
+        height: 16px;
+        top: 8px;
+        left: 8px;
+    }
+    .logo-detalhes {
+        height: 24px;
+        top: 10px;
+        right: 10px;
+    }
+}
+.cabecalho-detalhes {
+    position: relative;
+    background: linear-gradient(135deg, #ee9300, #ffae42);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    margin-bottom: 40px;
+    animation: fadeIn 1s ease-in-out;
 }
 
-/* Estilo do cabeçalho */
-.top-header {
-  display: flex;
-  align-items: center;
-  padding: 16px 24px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+.cabecalho-detalhes h1 {
+    font-size: 2.4rem;
+    letter-spacing: 1px;
 }
 
-/* Estilo da logo */
-.logo {
-  height: 48px;
-  width: auto;
+/* Estilo da logo + frase no header */
+.marca-infrasport {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-/* Conteúdo principal */
-.conteudo-principal {
-  padding: 24px;
+.logo-detalhes-header {
+    height: 50px;
+    width: auto;
 }
 
-/* Exemplo de título */
-.conteudo-principal h1 {
-  color: #333;
+.texto-registrado {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgb(5, 5, 5);
 }
-.top-header {
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: white; /* ou a cor que você quiser */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+/* Container horizontal da imagem + marca */
+.imagem-e-marca {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
 }
 
-.logo {
-  height: 40px; /* ajuste conforme necessário */
-  width: auto;
+/* Imagem maior agora */
+#imagem-espaco {
+    width: 60%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
-.imagem-espaco {
-  width: 100%;
-  max-width: 300px; /* Ou ajuste conforme o layout desejado */
-  height: 200px; /* Altura fixa para padronizar */
-  object-fit: cover; /* Mantém o corte proporcional sem distorcer */
-  border-radius: 10px;
-  margin-bottom: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+/* Marca da Infrasport ao lado */
+.registrado-infrasport {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    color: #444;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 12px 18px;
+    border-radius: 12px;
+}
+
+/* Logo menor e do lado direito */
+.logo-infrasport-lateral {
+    height: 80px;
+    width: auto;
 }
