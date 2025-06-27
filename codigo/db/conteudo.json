@@ -192,5 +192,25 @@
       "acessibilidade": ["Piso tátil", "Área plana"],
       "imagem": "assets/img/parque-jacques.jpg"
     }
+  ],
+
+  
+  "users": [
+    {
+      "id": 1,
+      "username": "usuario1",
+      "password": "senha123",
+      "cep": "12345-678",
+      "favoriteSport": "skate",
+      "receiveVideos": true
+    },
+    {
+      "id": 2,
+      "username": "usuario2",
+      "password": "senha456",
+      "cep": "98765-432",
+      "favoriteSport": "ciclismo",
+      "receiveVideos": false
+    }
   ]
 }
