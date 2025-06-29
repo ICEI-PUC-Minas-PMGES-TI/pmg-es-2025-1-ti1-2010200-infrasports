@@ -1,120 +1,96 @@
-// Página inicial de Login
-const LOGIN_URL = "/modulos/login/login.html";
-let RETURN_URL = "/modulos/login/index.html";
-const API_URL = '/usuarios';
+const LOGIN_URL = "../páginas/login.html";
+let RETURN_URL = "../public/home-page.html";
+const API_URL = '/users';
 
-// Objeto para o banco de dados de usuários baseado em JSON
-var db_usuarios = {};
-
-// Objeto para o usuário corrente
-var usuarioCorrente = {};
+// Agora é um array
+let db_usuarios = [];
+let usuarioCorrente = {};
 
 // Inicializa a aplicação de Login
-function initLoginApp () {
-    let pagina = window.location.pathname;
-    if (pagina != LOGIN_URL) {
-        // CONFIGURA A URLS DE RETORNO COMO A PÁGINA ATUAL
+async function initLoginApp() {
+    const pagina = window.location.pathname;
+
+    if (pagina !== LOGIN_URL) {
         sessionStorage.setItem('returnURL', pagina);
         RETURN_URL = pagina;
 
-        // INICIALIZA USUARIOCORRENTE A PARTIR DE DADOS NO LOCAL STORAGE, CASO EXISTA
-        usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
+        const usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
         if (usuarioCorrenteJSON) {
-            usuarioCorrente = JSON.parse (usuarioCorrenteJSON);
+            usuarioCorrente = JSON.parse(usuarioCorrenteJSON);
         } else {
             window.location.href = LOGIN_URL;
         }
 
-        // REGISTRA LISTENER PARA O EVENTO DE CARREGAMENTO DA PÁGINA PARA ATUALIZAR INFORMAÇÕES DO USUÁRIO
-        document.addEventListener('DOMContentLoaded', function () {
-            showUserInfo ('userInfo');
-        });
-    }
-    else {
-        // VERIFICA SE A URL DE RETORNO ESTÁ DEFINIDA NO SESSION STORAGE, CASO CONTRARIO USA A PÁGINA INICIAL
-        let returnURL = sessionStorage.getItem('returnURL');
-        RETURN_URL = returnURL || RETURN_URL
-        
-        // INICIALIZA BANCO DE DADOS DE USUÁRIOS
-        carregarUsuarios(() => {
-            console.log('Usuários carregados...');
-        });
-    }
-};
+        // Removido showUserInfo pois não está definido
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     showUserInfo('userInfo');
+        // });
+    } else {
+        const returnURL = sessionStorage.getItem('returnURL');
+        RETURN_URL = returnURL || RETURN_URL;
 
-
-function carregarUsuarios(callback) {
-    fetch(API_URL)
-    .then(response => response.json())
-    .then(data => {
-        db_usuarios = data;
-        callback ()
-    })
-    .catch(error => {
-        console.error('Erro ao ler usuários via API JSONServer:', error);
-        displayMessage("Erro ao ler usuários");
-    });
+        // Carrega usuários ao iniciar página de login
+        await carregarUsuarios();
+        console.log('Usuários carregados com sucesso.');
+    }
 }
 
-// Verifica se o login do usuário está ok e, se positivo, direciona para a página inicial
-function loginUser (login, senha) {
+// Função para carregar usuários da API
+function carregarUsuarios() {
+    return fetch(API_URL)
+        .then(response => response.json())
+        .then(data => {
+            db_usuarios = data; // agora é um array
+        })
+        .catch(error => {
+            console.error('Erro ao ler usuários via API JSONServer:', error);
+            displayMessage("Erro ao ler usuários.");
+        });
+}
 
-    // Verifica todos os itens do banco de dados de usuarios 
-    // para localizar o usuário informado no formulario de login
-    for (var i = 0; i < db_usuarios.length; i++) {
-        var usuario = db_usuarios[i];
+// Verifica login e senha contra o banco de usuários
+function loginUser(login, senha) {
+    const usuario = db_usuarios.find(user => user.login === login && user.senha === senha);
 
-        // Se encontrou login, carrega usuário corrente e salva no Session Storage
-        if (login == usuario.login && senha == usuario.senha) {
-            usuarioCorrente.id = usuario.id;
-            usuarioCorrente.login = usuario.login;
-            usuarioCorrente.email = usuario.email;
-            usuarioCorrente.nome = usuario.nome;
+    if (usuario) {
+        usuarioCorrente = {
+            id: usuario.id,
+            login: usuario.login,
+            email: usuario.email,
+            nome: usuario.nome
+        };
 
-            // Salva os dados do usuário corrente no Session Storage, mas antes converte para string
-            sessionStorage.setItem ('usuarioCorrente', JSON.stringify (usuarioCorrente));
-
-            // Retorna true para usuário encontrado
-            return true;
-        }
+        sessionStorage.setItem('usuarioCorrente', JSON.stringify(usuarioCorrente));
+        return true;
     }
 
-    // Se chegou até aqui é por que não encontrou o usuário e retorna falso
     return false;
 }
 
-// Apaga os dados do usuário corrente no sessionStorage
-function logoutUser () {
-    sessionStorage.removeItem ('usuarioCorrente');
+// Logout
+function logoutUser() {
+    sessionStorage.removeItem('usuarioCorrente');
     window.location = LOGIN_URL;
 }
+
+// Cadastra novo usuário
 function addUser(nome, login, senha, email, dataNascimento, endereco, hobby, esporte, fotoPerfil) {
-    let usuario = {
-        nome: nome,
-        login: login,
-        senha: senha,
-        email: email,
-        dataNascimento: dataNascimento,
-        endereco: endereco,
-        hobby: hobby,
-        esporte: esporte,
-        fotoPerfil: fotoPerfil
+    const usuario = {
+        nome, login, senha, email, dataNascimento, endereco, hobby, esporte, fotoPerfil
     };
 
     fetch(API_URL, {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(usuario),
     })
     .then(response => response.json())
     .then(data => {
-        db_usuarios.push(usuario);
+        db_usuarios.push(data); // usa o dado retornado pela API
         alert("Cadastro realizado com sucesso!");
     })
     .catch(error => {
-        console.error('Erro ao inserir usuário via API JSONServer:', error);
+        console.error('Erro ao cadastrar usuário via API JSONServer:', error);
         alert("Erro ao cadastrar usuário.");
     });
 }

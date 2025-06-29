@@ -5,14 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Detalhes do Espaço</title>
 
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="js/detalhes.js" defer></script>
+    <link rel="stylesheet" href="../assets/css/espaços.css" />
+    <link rel="stylesheet" href="../assets/css/home-page.css">
+
 </head>
 <body>
     <!-- Cabeçalho simples -->
     <header>
-        <h1 id="nome-espaco"></h1>
+      <nav class="navbar">
+        <div class="nav-left">
+        <img src="Logo_InfraSports-sem fundo.png" alt="">
+          <span class="logo-text"></span>
+        </div>
+        <ul class="nav-right">
+          <li><a href="mapa.html"><i class="fas fa-map"></i> Mapa</a></li>
+          <li><a href="espaços.html"><i class="fas fa-tree"></i> Espaços</a></li>
+          <li><a href="Cadas_Local.html"><i class="fas fa-plus-circle"></i> Cadastrar</a></li>
+          <li><a href="aval.html"><i class="fas fa-star"></i> Avaliar</a></li>
+          <li><a href="login.html"><i class="fas fa-user"></i> Conta</a></li>
+        </ul>
+      </nav>
     </header>
+ 
 
     <main>
         <!-- Imagem + frase e logo lado a lado -->
@@ -60,5 +74,17 @@
             <p><strong>Condição:</strong> <span id="condicao">--</span></p>
         </div>
     </main>
+
+        <footer class="rodape">
+      <div class="container rodape-container">
+        <p>© 2025 InfraSport | Prefeitura de Belo Horizonte | Secretaria de Mobilidade Urbana</p>
+        <div class="redes-sociais">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </footer>
+    <script src="../assets/js/detalhes.js" defer></script>
 </body>
 </html>

@@ -8,22 +8,21 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <link rel="stylesheet" href="/codigo/home-page.css" />
-    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="../assets/css/login.css" />
+    <link rel="stylesheet" href="../assets/css/home-page.css" />
   </head>
   <body>
     <!-- Cabeçalho -->
     <header>
       <nav class="navbar">
         <div class="nav-left">
-          <img src="/Logo_InfraSports-sem fundo.png" alt="Logo InfraSport" />
-          <span class="logo-text">InfraSport</span>
+          <img src="Logo_InfraSports-sem fundo.png" alt="Logo InfraSport" />
         </div>
         <ul class="nav-right">
-          <li><a href="/joao_lucca_alves/mapa.html"><i class="fas fa-map"></i> Mapa</a></li>
-          <li><a href="/Gabriel/espaços.html"><i class="fas fa-tree"></i> Espaços</a></li>
-          <li><a href="/Ian/html/Cadas_Local.html"><i class="fas fa-plus-circle"></i> Cadastrar</a></li>
-          <li><a href="/joao_pedro/aval.html"><i class="fas fa-star"></i> Avaliar</a></li>
+          <li><a href="mapa.html"><i class="fas fa-map"></i> Mapa</a></li>
+          <li><a href="espaços.html"><i class="fas fa-tree"></i> Espaços</a></li>
+          <li><a href="Cadas_Local.html"><i class="fas fa-plus-circle"></i> Cadastrar</a></li>
+          <li><a href="aval.html"><i class="fas fa-star"></i> Avaliar</a></li>
           <li><a href="login.html"><i class="fas fa-user"></i> Conta</a></li>
         </ul>
       </nav>
@@ -41,22 +40,10 @@
         <h2>Entrar no InfraSport</h2>
         <form id="loginForm">
           <label for="login">Usuário</label>
-          <input
-            type="text"
-            id="login"
-            name="login"
-            required
-            placeholder="Digite seu login"
-          />
+          <input type="text" id="login" name="login" required placeholder="Digite seu login" />
 
           <label for="senha">Senha</label>
-          <input
-            type="password"
-            id="senha"
-            name="senha"
-            required
-            placeholder="Digite sua senha"
-          />
+          <input type="password" id="senha" name="senha" required placeholder="Digite sua senha" />
 
           <div class="login-links">
             <a href="esqueceu-senha.html">Esqueceu a senha?</a>
@@ -81,21 +68,31 @@
       </div>
     </footer>
 
-    <script src="login-app.js"></script>
-    <script>
-      document.getElementById("loginForm").addEventListener("submit", function (e) {
-        e.preventDefault();
-        const login = document.getElementById("login").value;
-        const senha = document.getElementById("senha").value;
+    <!-- Scripts -->
+<script src="../assets/js/login-app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    initLoginApp();
 
-        if (loginUser(login, senha)) {
-          window.location.href =
-            sessionStorage.getItem("returnURL") || "/index.html";
+    const form = document.getElementById("loginForm");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const login = document.getElementById("login").value.trim();
+      const senha = document.getElementById("senha").value.trim();
+
+      // Aguarda usuários antes de autenticar
+      await carregarUsuarios(() => {
+        const sucesso = loginUser(login, senha);
+        if (sucesso) {
+          const destino = sessionStorage.getItem("returnURL") || "/index.html";
+          window.location.href = destino;
         } else {
-          document.getElementById("mensagemErro").textContent =
-            "Usuário ou senha inválidos.";
+          document.getElementById("mensagemErro").textContent = "Usuário ou senha inválidos.";
         }
       });
-    </script>
+    });
+  });
+</script>
   </body>
 </html>

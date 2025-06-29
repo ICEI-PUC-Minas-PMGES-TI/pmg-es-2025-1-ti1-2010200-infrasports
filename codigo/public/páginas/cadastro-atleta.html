@@ -8,23 +8,22 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <link rel="stylesheet" href="/codigo/home-page.css" />
-    <link rel="stylesheet" href="/codigo/trabalho/login.css" />
-    <link rel="stylesheet" href="/codigo/trabalho/cadastro-atleta.css" />
+      <link rel="stylesheet" href="../assets/css/cadastro-atleta.css" />
+    <link rel="stylesheet" href="../assets/css/home-page.css">
 
   </head>
   <body>
-    <header>
+   <header>
       <nav class="navbar">
         <div class="nav-left">
-          <img src="/Logo_InfraSports-sem fundo.png" alt="Logo InfraSport" />
-          <span class="logo-text">InfraSport</span>
+        <img src="Logo_InfraSports-sem fundo.png" alt="">
+          <span class="logo-text"></span>
         </div>
         <ul class="nav-right">
-          <li><a href="/joao_lucca_alves/mapa.html"><i class="fas fa-map"></i> Mapa</a></li>
-          <li><a href="/Gabriel/espaços.html"><i class="fas fa-tree"></i> Espaços</a></li>
-          <li><a href="/Ian/html/Cadas_Local.html"><i class="fas fa-plus-circle"></i> Cadastrar</a></li>
-          <li><a href="/joao_pedro/aval.html"><i class="fas fa-star"></i> Avaliar</a></li>
+          <li><a href="mapa.html"><i class="fas fa-map"></i> Mapa</a></li>
+          <li><a href="espaços.html"><i class="fas fa-tree"></i> Espaços</a></li>
+          <li><a href="Cadas_Local.html"><i class="fas fa-plus-circle"></i> Cadastrar</a></li>
+          <li><a href="aval.html"><i class="fas fa-star"></i> Avaliar</a></li>
           <li><a href="login.html"><i class="fas fa-user"></i> Conta</a></li>
         </ul>
       </nav>
@@ -92,11 +91,11 @@
             placeholder="Digite seu e-mail"
           />
 
-          <label for="usuario">Nome de Usuário</label>
+          <label for="login">Nome de Usuário</label>
           <input
             type="text"
-            id="usuario"
-            name="usuario"
+            id="login"
+            name="login"
             required
             placeholder="Escolha um nome de usuário"
           />
@@ -122,42 +121,19 @@
       </section>
     </main>
 
-    <footer class="rodape">
+     <footer class="rodape">
       <div class="container rodape-container">
         <p>© 2025 InfraSport | Prefeitura de Belo Horizonte | Secretaria de Mobilidade Urbana</p>
         <div class="redes-sociais">
           <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>  
           <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
       </div>
     </footer>
 
-    <script>
-      document
-        .getElementById("cadastroAtletaForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-
-          // pegar dados do formulário
-          const atleta = {
-            nome: this.nome.value.trim(),
-            dataNascimento: this.dataNascimento.value,
-            endereco: this.endereco.value.trim(),
-            hobby: this.hobby.value.trim(),
-            esporte: this.esporte.value,
-            email: this.email.value.trim(),
-            usuario: this.usuario.value.trim(),
-            senha: this.senha.value,
-          };
-
-          // Aqui você pode fazer a validação, enviar para o JSON Server, LocalStorage, etc
-          // Por enquanto só mostro um alerta de sucesso:
-          alert("Cadastro realizado com sucesso!\n" + JSON.stringify(atleta, null, 2));
-
-          // opcional: limpar formulário
-          this.reset();
-        });
-    </script>
+    <script src="../assets/js/cadastro-atleta.js"></script>
+    
+    <script src="../assets/js/cadastro-atleta.js"></script>
   </body>
 </html>

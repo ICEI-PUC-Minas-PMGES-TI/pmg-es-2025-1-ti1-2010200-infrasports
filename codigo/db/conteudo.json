@@ -3,92 +3,272 @@
     {
       "nome": "Ciclovia Av. Antônio Carlos",
       "coordenadas": [
-        [-19.9300, -43.9380],
-        [-19.9315, -43.9370],
-        [-19.9330, -43.9360],
-        [-19.9350, -43.9345]
-      ]
+        [
+          -19.93,
+          -43.938
+        ],
+        [
+          -19.9315,
+          -43.937
+        ],
+        [
+          -19.933,
+          -43.936
+        ],
+        [
+          -19.935,
+          -43.9345
+        ]
+      ],
+      "id": "c0c5"
     },
     {
       "nome": "Ciclovia Av. Amazonas",
       "coordenadas": [
-        [-19.9200, -43.9400],
-        [-19.9180, -43.9420],
-        [-19.9160, -43.9440],
-        [-19.9140, -43.9460]
-      ]
+        [
+          -19.92,
+          -43.94
+        ],
+        [
+          -19.918,
+          -43.942
+        ],
+        [
+          -19.916,
+          -43.944
+        ],
+        [
+          -19.914,
+          -43.946
+        ]
+      ],
+      "id": "c0c6"
     },
     {
       "nome": "Ciclovia Parque Municipal",
       "coordenadas": [
-        [-19.9245, -43.9360],
-        [-19.9250, -43.9355],
-        [-19.9255, -43.9350],
-        [-19.9260, -43.9345]
-      ]
+        [
+          -19.9245,
+          -43.936
+        ],
+        [
+          -19.925,
+          -43.9355
+        ],
+        [
+          -19.9255,
+          -43.935
+        ],
+        [
+          -19.926,
+          -43.9345
+        ]
+      ],
+      "id": "84e5"
     },
     {
       "nome": "Ciclovia da Lagoa da Pampulha",
       "coordenadas": [
-        [-19.8500, -43.9800],
-        [-19.8520, -43.9780],
-        [-19.8540, -43.9760],
-        [-19.8560, -43.9740]
-      ]
+        [
+          -19.85,
+          -43.98
+        ],
+        [
+          -19.852,
+          -43.978
+        ],
+        [
+          -19.854,
+          -43.976
+        ],
+        [
+          -19.856,
+          -43.974
+        ]
+      ],
+      "id": "2609"
     },
     {
       "nome": "Ciclovia Av. do Contorno",
       "coordenadas": [
-        [-19.9340, -43.9300],
-        [-19.9335, -43.9320],
-        [-19.9330, -43.9340],
-        [-19.9325, -43.9360]
-      ]
+        [
+          -19.934,
+          -43.93
+        ],
+        [
+          -19.9335,
+          -43.932
+        ],
+        [
+          -19.933,
+          -43.934
+        ],
+        [
+          -19.9325,
+          -43.936
+        ]
+      ],
+      "id": "b180"
     },
     {
       "nome": "Ciclovia Av. Cristiano Machado",
       "coordenadas": [
-        [-19.9050, -43.9550],
-        [-19.9080, -43.9530],
-        [-19.9110, -43.9510],
-        [-19.9140, -43.9490]
-      ]
+        [
+          -19.905,
+          -43.955
+        ],
+        [
+          -19.908,
+          -43.953
+        ],
+        [
+          -19.911,
+          -43.951
+        ],
+        [
+          -19.914,
+          -43.949
+        ]
+      ],
+      "id": "5309"
     },
     {
       "nome": "Ciclovia Av. Pedro II",
       "coordenadas": [
-        [-19.9100, -43.9300],
-        [-19.9120, -43.9280],
-        [-19.9140, -43.9260],
-        [-19.9160, -43.9240]
-      ]
+        [
+          -19.91,
+          -43.93
+        ],
+        [
+          -19.912,
+          -43.928
+        ],
+        [
+          -19.914,
+          -43.926
+        ],
+        [
+          -19.916,
+          -43.924
+        ]
+      ],
+      "id": "781e"
     }
   ],
   "estacoesBikeBH": [
-    { "nome": "Estação Praça Sete", "coordenadas": [-19.9200, -43.9380] },
-    { "nome": "Estação Savassi", "coordenadas": [-19.9390, -43.9380] },
-    { "nome": "Estação Praça da Liberdade", "coordenadas": [-19.9310, -43.9350] },
-    { "nome": "Estação Mercado Central", "coordenadas": [-19.9190, -43.9430] },
-    { "nome": "Estação Santa Tereza", "coordenadas": [-19.9140, -43.9460] },
-    { "nome": "Estação Praça da Estação", "coordenadas": [-19.9190, -43.9370] },
-    { "nome": "Estação Pampulha", "coordenadas": [-19.8550, -43.9770] },
-    { "nome": "Estação Minascentro", "coordenadas": [-19.9350, -43.9340] },
-    { "nome": "Estação BH Shopping", "coordenadas": [-19.9300, -43.9380] },
-    { "nome": "Estação Praça do Papa", "coordenadas": [-19.9500, -43.9300] }
+    {
+      "nome": "Estação Praça Sete",
+      "coordenadas": [
+        -19.92,
+        -43.938
+      ],
+      "id": "d2cc"
+    },
+    {
+      "nome": "Estação Savassi",
+      "coordenadas": [
+        -19.939,
+        -43.938
+      ],
+      "id": "b97e"
+    },
+    {
+      "nome": "Estação Praça da Liberdade",
+      "coordenadas": [
+        -19.931,
+        -43.935
+      ],
+      "id": "431c"
+    },
+    {
+      "nome": "Estação Mercado Central",
+      "coordenadas": [
+        -19.919,
+        -43.943
+      ],
+      "id": "dfff"
+    },
+    {
+      "nome": "Estação Santa Tereza",
+      "coordenadas": [
+        -19.914,
+        -43.946
+      ],
+      "id": "6189"
+    },
+    {
+      "nome": "Estação Praça da Estação",
+      "coordenadas": [
+        -19.919,
+        -43.937
+      ],
+      "id": "37a5"
+    },
+    {
+      "nome": "Estação Pampulha",
+      "coordenadas": [
+        -19.855,
+        -43.977
+      ],
+      "id": "229a"
+    },
+    {
+      "nome": "Estação Minascentro",
+      "coordenadas": [
+        -19.935,
+        -43.934
+      ],
+      "id": "5251"
+    },
+    {
+      "nome": "Estação BH Shopping",
+      "coordenadas": [
+        -19.93,
+        -43.938
+      ],
+      "id": "4c28"
+    },
+    {
+      "nome": "Estação Praça do Papa",
+      "coordenadas": [
+        -19.95,
+        -43.93
+      ],
+      "id": "6362"
+    }
   ],
   "pontosInteresse": [
-    { "nome": "Parque Municipal", "coordenadas": [-19.9250, -43.9350] },
-    { "nome": "Praça da Liberdade", "coordenadas": [-19.9310, -43.9350] },
-    { "nome": "Mineirão", "coordenadas": [-19.8650, -43.9710] }
+    {
+      "nome": "Parque Municipal",
+      "coordenadas": [
+        -19.925,
+        -43.935
+      ],
+      "id": "9d0d"
+    },
+    {
+      "nome": "Praça da Liberdade",
+      "coordenadas": [
+        -19.931,
+        -43.935
+      ],
+      "id": "3b61"
+    },
+    {
+      "nome": "Mineirão",
+      "coordenadas": [
+        -19.865,
+        -43.971
+      ],
+      "id": "3637"
+    }
   ],
-
-
   "avaliacoes": [
     {
-      "id": "b3d8",
-      "nome": "Teste",
-      "estrelas": 5,
-      "texto": "teste"
+      "id": "d3f1",
+      "nome": "João Pedro",
+      "comentario": "teste",
+      "estrelas": 4
     }
   ],
   "treinos": [
@@ -105,113 +285,176 @@
       "observacoes": "Teste\n"
     }
   ],
-
-  
   "espacos": [
     {
-      "id": 1,
+      "id": "1",
       "nome": "Parque das Mangabeiras",
       "descricao": "Trilha asfaltada com cerca de 3km, ideal para corrida e caminhada.",
       "tipo": "Trilha para Corrida",
       "localizacao": "Belo Horizonte - MG",
       "horario_funcionamento": "06:00 às 20:00",
       "avaliacao": 4.7,
-      "infraestrutura": ["Estacionamento", "Bebedouro", "Banheiros", "Iluminação noturna"],
-      "acessibilidade": ["Rampa de acesso", "Piso tátil", "Banheiro adaptado"],
+      "infraestrutura": [
+        "Estacionamento",
+        "Bebedouro",
+        "Banheiros",
+        "Iluminação noturna"
+      ],
+      "acessibilidade": [
+        "Rampa de acesso",
+        "Piso tátil",
+        "Banheiro adaptado"
+      ],
       "imagem": "assets/img/parque-mangabeiras.jpg",
       "criadoPor": "admin",
-      "podeExcluir": ["admin"]
+      "podeExcluir": [
+        "admin"
+      ]
     },
     {
-      "id": 2,
+      "id": "2",
       "nome": "Praça JK",
       "descricao": "Área ao ar livre com barras para exercícios de calistenia e treinos funcionais.",
       "tipo": "Espaço Funcional",
       "localizacao": "Belo Horizonte - MG",
       "horario_funcionamento": "24 horas",
       "avaliacao": 4.5,
-      "infraestrutura": ["Barras fixas", "Área gramada", "Iluminação pública"],
-      "acessibilidade": ["Caminhos nivelados"],
+      "infraestrutura": [
+        "Barras fixas",
+        "Área gramada",
+        "Iluminação pública"
+      ],
+      "acessibilidade": [
+        "Caminhos nivelados"
+      ],
       "imagem": "assets/img/praca-jk.jpg",
       "criadoPor": "admin",
-      "podeExcluir": ["admin"]
+      "podeExcluir": [
+        "admin"
+      ]
     },
     {
-      "id": 3,
+      "id": "3",
       "nome": "Parque Municipal Américo Renné Giannetti",
       "descricao": "Tradicional parque com lago, áreas de caminhada e ambiente arborizado no centro de BH.",
       "tipo": "Parque Urbano",
       "localizacao": "Centro - Belo Horizonte - MG",
       "horario_funcionamento": "06:00 às 17:00",
       "avaliacao": 4.6,
-      "infraestrutura": ["Playground", "Lanchonete", "Pedalinhos", "Banheiros"],
-      "acessibilidade": ["Rampa de acesso", "Banheiro adaptado"],
+      "infraestrutura": [
+        "Playground",
+        "Lanchonete",
+        "Pedalinhos",
+        "Banheiros"
+      ],
+      "acessibilidade": [
+        "Rampa de acesso",
+        "Banheiro adaptado"
+      ],
       "imagem": "assets/img/parque-municipal.jpg",
       "criadoPor": "admin",
-      "podeExcluir": ["admin"]
+      "podeExcluir": [
+        "admin"
+      ]
     },
     {
-      "id": 4,
+      "id": "4",
       "nome": "Praça da Liberdade",
       "descricao": "Espaço arborizado com jardins planejados, perfeito para caminhadas tranquilas e lazer.",
       "tipo": "Praça",
       "localizacao": "Savassi - Belo Horizonte - MG",
       "horario_funcionamento": "06:00 às 22:00",
       "avaliacao": 4.8,
-      "infraestrutura": ["Bancos", "Iluminação pública", "Wi-Fi", "Jardins"],
-      "acessibilidade": ["Caminhos nivelados", "Sinalização tátil"],
+      "infraestrutura": [
+        "Bancos",
+        "Iluminação pública",
+        "Wi-Fi",
+        "Jardins"
+      ],
+      "acessibilidade": [
+        "Caminhos nivelados",
+        "Sinalização tátil"
+      ],
       "imagem": "assets/img/praca-liberdade.jpg",
       "criadoPor": "admin",
-      "podeExcluir": ["admin"]
+      "podeExcluir": [
+        "admin"
+      ]
     },
     {
-      "id": 5,
+      "id": "5",
       "nome": "Parque Ecológico da Pampulha",
       "descricao": "Ampla área verde com lagoa, trilhas e espaços para piquenique na região da Pampulha.",
       "tipo": "Parque Ecológico",
       "localizacao": "Pampulha - Belo Horizonte - MG",
       "horario_funcionamento": "08:00 às 17:00 (ter a dom)",
       "avaliacao": 4.3,
-      "infraestrutura": ["Trilhas", "Quiosques", "Banheiros", "Estacionamento"],
-      "acessibilidade": ["Rampa de acesso", "Estacionamento reservado"],
+      "infraestrutura": [
+        "Trilhas",
+        "Quiosques",
+        "Banheiros",
+        "Estacionamento"
+      ],
+      "acessibilidade": [
+        "Rampa de acesso",
+        "Estacionamento reservado"
+      ],
       "imagem": "assets/img/parque-pampulha.jpg",
       "criadoPor": "admin",
-      "podeExcluir": ["admin"]
+      "podeExcluir": [
+        "admin"
+      ]
     },
     {
-      "id": 6,
+      "id": "6",
       "nome": "Mirante do Mangabeiras",
       "descricao": "Ponto turístico com vista panorâmica da cidade e ambiente propício para relaxamento.",
       "tipo": "Mirante",
       "localizacao": "Serra do Curral - Belo Horizonte - MG",
       "horario_funcionamento": "09:00 às 18:00",
       "avaliacao": 4.9,
-      "infraestrutura": ["Deck de madeira", "Segurança", "Banheiros"],
-      "acessibilidade": ["Rampas largas", "Corrimãos"],
+      "infraestrutura": [
+        "Deck de madeira",
+        "Segurança",
+        "Banheiros"
+      ],
+      "acessibilidade": [
+        "Rampas largas",
+        "Corrimãos"
+      ],
       "imagem": "assets/img/mirante-mangabeiras.jpg",
       "criadoPor": "admin",
-      "podeExcluir": ["admin"]
+      "podeExcluir": [
+        "admin"
+      ]
     },
     {
-      "id": 7,
+      "id": "7",
       "nome": "Parque Jacques Cousteau",
       "descricao": "Parque com vegetação nativa, pista para caminhada e equipamentos de ginástica.",
       "tipo": "Parque de Bairro",
       "localizacao": "Betânia - Belo Horizonte - MG",
       "horario_funcionamento": "07:00 às 18:00",
       "avaliacao": 4.4,
-      "infraestrutura": ["Academia ao ar livre", "Trilhas", "Banheiros"],
-      "acessibilidade": ["Piso tátil", "Área plana"],
+      "infraestrutura": [
+        "Academia ao ar livre",
+        "Trilhas",
+        "Banheiros"
+      ],
+      "acessibilidade": [
+        "Piso tátil",
+        "Área plana"
+      ],
       "imagem": "assets/img/parque-jacques.jpg",
       "criadoPor": "admin",
-      "podeExcluir": ["admin"]
+      "podeExcluir": [
+        "admin"
+      ]
     }
   ],
-
-  
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "username": "usuario1",
       "password": "senha123",
       "cep": "12345-678",
@@ -219,12 +462,23 @@
       "receiveVideos": true
     },
     {
-      "id": 2,
+      "id": "2",
       "username": "usuario2",
       "password": "senha456",
       "cep": "98765-432",
       "favoriteSport": "ciclismo",
       "receiveVideos": false
+    },
+    {
+      "id": "dbc4",
+      "nome": "Joao Pedro",
+      "dataNascimento": "2025-06-03",
+      "endereco": "Rua teste",
+      "hobby": "jogar",
+      "esporte": "futebol",
+      "email": "joao@gmail.com",
+      "usuario": "Joao",
+      "senha": "12345"
     }
   ]
 }

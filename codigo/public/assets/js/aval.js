@@ -1,127 +1,119 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const estrelas = document.querySelectorAll('.estrela');
-  const nomeInput = document.getElementById('usuario');
-  const comentarioInput = document.getElementById('comentario');
-  const confirmarBtn = document.getElementById('confirmar');
-  const avaliacoesContainer = document.querySelector('.avaliacoes');
-  let avaliacao = 0;
+const botoesEstrelas = document.querySelectorAll('.estrela');
+const btnConfirmar = document.getElementById('confirmar');
+const inputNome = document.getElementById('usuario');
+const inputComentario = document.getElementById('comentario');
+const containerAvaliacoes = document.querySelector('.avaliacoes');
 
-  function atualizarEstrelas(nota) {
-    estrelas.forEach((estrela) => {
-      const valor = Number(estrela.dataset.valor);
-      estrela.classList.toggle('ativa', valor <= nota);
-      // Atualiza aria-pressed para acessibilidade
-      estrela.setAttribute('aria-pressed', valor === nota ? 'true' : 'false');
-    });
+let avaliacaoSelecionada = 0;
+
+// Atualiza o estado visual das estrelas e atributo aria-checked
+function atualizarEstrelas() {
+  botoesEstrelas.forEach((estrela) => {
+    const valor = parseInt(estrela.dataset.valor);
+    const selecionada = valor <= avaliacaoSelecionada;
+    estrela.classList.toggle('selecionada', selecionada);
+    estrela.setAttribute('aria-checked', selecionada);
+  });
+}
+
+// Verifica se os campos estão preenchidos para habilitar o botão
+function verificarCampos() {
+  const habilitar = inputNome.value.trim() !== '' &&
+                   inputComentario.value.trim() !== '' &&
+                   avaliacaoSelecionada > 0;
+  btnConfirmar.disabled = !habilitar;
+}
+
+// Exibe uma avaliação na lista
+function exibirAvaliacao(avaliacao) {
+  const div = document.createElement('div');
+  div.classList.add('avaliacao');
+
+  const label = document.createElement('label');
+  label.textContent = avaliacao.nome;
+
+  const estrelas = document.createElement('div');
+  estrelas.classList.add('estrelas');
+  for (let i = 1; i <= 5; i++) {
+    const estrela = document.createElement('span');
+    estrela.textContent = '★';
+    estrela.style.color = i <= avaliacao.estrelas ? '#f1c40f' : '#ccc';
+    estrelas.appendChild(estrela);
   }
 
-  function verificarCampos() {
-    // Habilita o botão Confirmar apenas se avaliacao > 0 e comentário não vazio
-    confirmarBtn.disabled = !(avaliacao > 0 && comentarioInput.value.trim() !== '');
-  }
+  const p = document.createElement('p');
+  p.textContent = avaliacao.comentario;
 
-  estrelas.forEach((estrela) => {
-    const valor = Number(estrela.dataset.valor);
+  div.appendChild(label);
+  div.appendChild(estrelas);
+  div.appendChild(p);
+  containerAvaliacoes.appendChild(div);
+}
 
-    estrela.addEventListener('click', () => {
-      avaliacao = valor;
-      atualizarEstrelas(avaliacao);
-      verificarCampos();
-    });
+// Limpa o formulário após envio
+function limparFormulario() {
+  inputNome.value = '';
+  inputComentario.value = '';
+  avaliacaoSelecionada = 0;
+  atualizarEstrelas();
+  verificarCampos();
+}
 
-    estrela.addEventListener('mouseover', () => {
-      atualizarEstrelas(valor);
-    });
+// Eventos das estrelas para seleção
+botoesEstrelas.forEach((estrela) => {
+  estrela.addEventListener('click', () => {
+    avaliacaoSelecionada = parseInt(estrela.dataset.valor);
+    atualizarEstrelas();
+    verificarCampos();
+  });
+});
 
-    estrela.addEventListener('mouseout', () => {
-      atualizarEstrelas(avaliacao);
-    });
+// Monitorar inputs para habilitar botão
+inputNome.addEventListener('input', verificarCampos);
+inputComentario.addEventListener('input', verificarCampos);
+
+// Enviar avaliação para o JSON Server
+btnConfirmar.addEventListener('click', () => {
+  const nome = inputNome.value.trim();
+  const comentario = inputComentario.value.trim();
+
+  if (!nome || !comentario || avaliacaoSelecionada === 0) return;
+
+  const novaAvaliacao = {
+    nome,
+    comentario,
+    estrelas: avaliacaoSelecionada
+  };
+
+  fetch('http://localhost:3000/avaliacoes', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(novaAvaliacao)
+  })
+  .then(res => {
+    if (!res.ok) throw new Error('Erro ao salvar avaliação');
+    return res.json();
+  })
+  .then(dados => {
+    exibirAvaliacao(dados);
+    limparFormulario();
+  })
+  .catch(err => {
+    console.error(err);
+    alert('Erro ao salvar avaliação. Verifique se o JSON Server está rodando.');
+  });
+});
+
+// Carregar avaliações já salvas ao iniciar
+fetch('http://localhost:3000/avaliacoes')
+  .then(res => res.json())
+  .then(dados => {
+    dados.forEach(exibirAvaliacao);
+  })
+  .catch(err => {
+    console.error('Erro ao carregar avaliações:', err);
   });
 
-  // Verifica comentário para habilitar o botão
-  comentarioInput.addEventListener('input', verificarCampos);
-
-  function gerarNomeUsuario() {
-    const nomes = ['Usuário', 'Anônimo', 'Visitante', 'Atleta'];
-    return nomes[Math.floor(Math.random() * nomes.length)];
-  }
-
-  async function renderizarAvaliacoes() {
-    avaliacoesContainer.innerHTML = '';
-
-    try {
-      const response = await fetch('http://localhost:3000/avaliacoes');
-      if (!response.ok) throw new Error('Erro ao buscar avaliações');
-      const avaliacoes = await response.json();
-
-      avaliacoes.forEach((av) => {
-        const div = document.createElement('div');
-        div.classList.add('avaliacao');
-
-        const label = document.createElement('label');
-        label.textContent = av.nome || 'Usuário';
-
-        const estrelasDiv = document.createElement('div');
-        estrelasDiv.classList.add('estrelas');
-        for (let i = 0; i < 5; i++) {
-          const estrela = document.createElement('span');
-          estrela.textContent = '★';
-          estrela.classList.toggle('ativa', i < av.estrelas);
-          estrelasDiv.appendChild(estrela);
-        }
-
-        const comentario = document.createElement('p');
-        comentario.textContent = av.texto;
-
-        div.appendChild(label);
-        div.appendChild(estrelasDiv);
-        div.appendChild(comentario);
-        avaliacoesContainer.appendChild(div);
-      });
-    } catch (error) {
-      console.error('Erro ao carregar avaliações:', error);
-      avaliacoesContainer.textContent = 'Não foi possível carregar as avaliações.';
-    }
-  }
-
-  async function salvarAvaliacao() {
-    const nome = nomeInput.value.trim();
-    const comentario = comentarioInput.value.trim();
-
-    if (avaliacao === 0 || comentario === '') {
-      alert('Por favor, selecione uma nota e escreva um comentário.');
-      return;
-    }
-
-    const novaAvaliacao = {
-      nome: nome !== '' ? nome : gerarNomeUsuario(),
-      estrelas: avaliacao,
-      texto: comentario
-    };
-
-    try {
-      const response = await fetch('http://localhost:3000/avaliacoes', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(novaAvaliacao)
-      });
-
-      if (!response.ok) throw new Error('Erro ao salvar avaliação');
-
-      nomeInput.value = '';
-      comentarioInput.value = '';
-      avaliacao = 0;
-      atualizarEstrelas(0);
-      confirmarBtn.disabled = true;
-      renderizarAvaliacoes();
-    } catch (error) {
-      console.error(error);
-      alert('Erro ao salvar a avaliação. Tente novamente.');
-    }
-  }
-
-  confirmarBtn.addEventListener('click', salvarAvaliacao);
-
-  renderizarAvaliacoes();
-  verificarCampos(); // para desabilitar botão no início
-});
+// Inicialização inicial
+atualizarEstrelas();
+verificarCampos();
