@@ -8,7 +8,7 @@ Informações básicas do projeto.
 
   * [João Lucca Alves Setragni](https://github.com/joaosetragni) 
   * [Ian Marco de Faria Barbosa](https://github.com/IanMarcoDeFariaBarbosa) 
-  * [Gabriel de Sousa Carvalho Ferreira](https://github.com/cicrano) 
+  * [Gabriel de Sousa Carvalho Ferreira](https://github.com/gabr1elsousa) 
   * [João Pedro Bandeira Ribas](https://github.com/JpBandeira24)
   * [vinicus daniel santos](https://github.com/vinid38)
 
