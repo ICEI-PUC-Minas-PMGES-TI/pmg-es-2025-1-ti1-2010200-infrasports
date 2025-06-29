@@ -90,7 +90,7 @@ a {
   opacity: 0.9;
 }
 
-
+/* Hero */
 .hero {
   background: linear-gradient(135deg, #fce3bf, #fff);
   padding: 40px 20px;
@@ -112,7 +112,7 @@ a {
   line-height: 1.6;
 }
 
-
+/* Cards */
 .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -152,7 +152,7 @@ a {
   color: #555;
 }
 
-
+/* Texto Explicativo */
 .descricao-site {
   background: #fff7f0;
   border: 2px solid #f39c12;
@@ -187,7 +187,7 @@ a {
   line-height: 1.6;
 }
 
-
+/* Rodapé */
 .rodape {
   background: linear-gradient(135deg, #e67e22, #f39c12);
   color: black;
@@ -223,7 +223,7 @@ a {
   transform: translateY(-3px);
 }
 
-
+/* Responsivo */
 @media (max-width: 768px) {
   .cabecalho .container,
   .rodape .container {
