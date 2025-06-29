@@ -118,7 +118,9 @@
       "avaliacao": 4.7,
       "infraestrutura": ["Estacionamento", "Bebedouro", "Banheiros", "Iluminação noturna"],
       "acessibilidade": ["Rampa de acesso", "Piso tátil", "Banheiro adaptado"],
-      "imagem": "assets/img/parque-mangabeiras.jpg"
+      "imagem": "assets/img/parque-mangabeiras.jpg",
+      "criadoPor": "admin",
+      "podeExcluir": ["admin"]
     },
     {
       "id": 2,
@@ -130,7 +132,9 @@
       "avaliacao": 4.5,
       "infraestrutura": ["Barras fixas", "Área gramada", "Iluminação pública"],
       "acessibilidade": ["Caminhos nivelados"],
-      "imagem": "assets/img/praca-jk.jpg"
+      "imagem": "assets/img/praca-jk.jpg",
+      "criadoPor": "admin",
+      "podeExcluir": ["admin"]
     },
     {
       "id": 3,
@@ -142,7 +146,9 @@
       "avaliacao": 4.6,
       "infraestrutura": ["Playground", "Lanchonete", "Pedalinhos", "Banheiros"],
       "acessibilidade": ["Rampa de acesso", "Banheiro adaptado"],
-      "imagem": "assets/img/parque-municipal.jpg"
+      "imagem": "assets/img/parque-municipal.jpg",
+      "criadoPor": "admin",
+      "podeExcluir": ["admin"]
     },
     {
       "id": 4,
@@ -154,7 +160,9 @@
       "avaliacao": 4.8,
       "infraestrutura": ["Bancos", "Iluminação pública", "Wi-Fi", "Jardins"],
       "acessibilidade": ["Caminhos nivelados", "Sinalização tátil"],
-      "imagem": "assets/img/praca-liberdade.jpg"
+      "imagem": "assets/img/praca-liberdade.jpg",
+      "criadoPor": "admin",
+      "podeExcluir": ["admin"]
     },
     {
       "id": 5,
@@ -166,7 +174,9 @@
       "avaliacao": 4.3,
       "infraestrutura": ["Trilhas", "Quiosques", "Banheiros", "Estacionamento"],
       "acessibilidade": ["Rampa de acesso", "Estacionamento reservado"],
-      "imagem": "assets/img/parque-pampulha.jpg"
+      "imagem": "assets/img/parque-pampulha.jpg",
+      "criadoPor": "admin",
+      "podeExcluir": ["admin"]
     },
     {
       "id": 6,
@@ -178,7 +188,9 @@
       "avaliacao": 4.9,
       "infraestrutura": ["Deck de madeira", "Segurança", "Banheiros"],
       "acessibilidade": ["Rampas largas", "Corrimãos"],
-      "imagem": "assets/img/mirante-mangabeiras.jpg"
+      "imagem": "assets/img/mirante-mangabeiras.jpg",
+      "criadoPor": "admin",
+      "podeExcluir": ["admin"]
     },
     {
       "id": 7,
@@ -190,7 +202,9 @@
       "avaliacao": 4.4,
       "infraestrutura": ["Academia ao ar livre", "Trilhas", "Banheiros"],
       "acessibilidade": ["Piso tátil", "Área plana"],
-      "imagem": "assets/img/parque-jacques.jpg"
+      "imagem": "assets/img/parque-jacques.jpg",
+      "criadoPor": "admin",
+      "podeExcluir": ["admin"]
     }
   ],
 

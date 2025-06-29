@@ -10,6 +10,8 @@ const espacos = [
     infraestrutura: ["Estacionamento", "Bebedouro", "Banheiros", "Iluminação noturna"],
     acessibilidade: ["Rampa de acesso", "Piso tátil", "Banheiro adaptado"],
     imagem: "assets/img/parque-mangabeiras.jpg",
+    criadoPor: "admin",
+    podeExcluir: ["admin"]
   },
   {
     id: 2,
@@ -22,6 +24,8 @@ const espacos = [
     infraestrutura: ["Barras fixas", "Área gramada", "Iluminação pública"],
     acessibilidade: ["Caminhos nivelados"],
     imagem: "assets/img/praca-jk.jpg",
+    criadoPor: "admin",
+    podeExcluir: ["admin"]
   },
   {
     id: 3,
@@ -34,6 +38,8 @@ const espacos = [
     infraestrutura: ["Lago", "Pista de caminhada", "Playground", "Área verde"],
     acessibilidade: ["Calçadas acessíveis", "Rampas", "Sinalização tátil"],
     imagem: "assets/img/parque-municipal.jpg",
+    criadoPor: "admin",
+    podeExcluir: ["admin"]
   },
   {
     id: 4,
@@ -46,6 +52,8 @@ const espacos = [
     infraestrutura: ["Jardins", "Bancos", "Pista de caminhada", "Iluminação"],
     acessibilidade: ["Piso tátil", "Banheiro adaptado", "Rampas de acesso"],
     imagem: "assets/img/praca-liberdade.jpg",
+    criadoPor: "admin",
+    podeExcluir: ["admin"]
   },
   {
     id: 5,
@@ -58,6 +66,8 @@ const espacos = [
     infraestrutura: ["Trilhas", "Área de piquenique", "Lagoa", "Estacionamento"],
     acessibilidade: ["Rampas", "Sinalização visual", "Pisos nivelados"],
     imagem: "assets/img/parque-pampulha.jpg",
+    criadoPor: "admin",
+    podeExcluir: ["admin"]
   },
   {
     id: 6,
@@ -70,6 +80,8 @@ const espacos = [
     infraestrutura: ["Mirante", "Café", "Segurança", "Banheiros"],
     acessibilidade: ["Elevador de acesso", "Banheiro adaptado"],
     imagem: "assets/img/mirante-mangabeiras.jpg",
+    criadoPor: "admin",
+    podeExcluir: ["admin"]
   },
   {
     id: 7,
@@ -82,6 +94,8 @@ const espacos = [
     infraestrutura: ["Equipamentos de ginástica", "Pista de caminhada", "Área verde"],
     acessibilidade: ["Caminhos acessíveis", "Rampa de acesso"],
     imagem: "assets/img/parque-jacques.jpg",
+    criadoPor: "admin",
+    podeExcluir: ["admin"]
   },
 ];
 
