@@ -18,76 +18,54 @@ a {
   padding: 20px;
 }
 
-/* Cabeçalho */
-.cabecalho {
+/* Navbar */
+.navbar {
   background: linear-gradient(135deg, #f39c12, #e67e22);
-  color: black;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.cabecalho .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  padding: 15px 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
+.nav-left {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
-.logo i {
-  font-size: 2rem;
+.nav-left img {
+  height: 50px;
+  width: auto;
 }
 
-.logo h1 {
+.logo-text {
   font-size: 1.8rem;
-  font-weight: 700;
-  margin: 0;
+  font-weight: bold;
+  color: black;
 }
 
-.menu ul {
-  display: flex;
+.nav-right {
   list-style: none;
+  display: flex;
   gap: 20px;
-  padding: 0;
-  margin: 0;
 }
 
-.menu a {
+.nav-right li a {
+  font-size: 1rem;
   display: flex;
   align-items: center;
-  font-weight: 500;
-  font-size: 1rem;
   color: black;
+  font-weight: 500;
   transition: opacity 0.3s;
 }
 
-.menu a i {
+.nav-right li a i {
   margin-right: 5px;
 }
 
-.menu a:hover {
+.nav-right li a:hover {
   opacity: 0.75;
-}
-
-.destaque {
-  text-align: center;
-  padding: 25px 0;
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-.destaque h2 {
-  margin: 0 0 10px;
-  font-size: 1.6rem;
-}
-
-.destaque p {
-  margin: 0;
-  font-size: 1rem;
-  opacity: 0.9;
 }
 
 /* Hero */
@@ -118,6 +96,10 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
   margin-bottom: 60px;
+}
+
+.card-link {
+  text-decoration: none;
 }
 
 .card-home {
@@ -152,7 +134,7 @@ a {
   color: #555;
 }
 
-/* Texto Explicativo */
+/* Descrição */
 .descricao-site {
   background: #fff7f0;
   border: 2px solid #f39c12;
@@ -185,6 +167,28 @@ a {
   margin-bottom: 10px;
   font-size: 1rem;
   line-height: 1.6;
+}
+
+/* Logo Area */
+.logo-area {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.logo-area .logo img {
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.logo-area h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+.logo-area h2 span {
+  color: #e67e22;
 }
 
 /* Rodapé */
@@ -225,15 +229,20 @@ a {
 
 /* Responsivo */
 @media (max-width: 768px) {
-  .cabecalho .container,
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .nav-right {
+    flex-direction: column;
+    gap: 10px;
+  }
+
   .rodape .container {
     flex-direction: column;
     gap: 15px;
     text-align: center;
-  }
-
-  .menu ul {
-    flex-direction: column;
-    gap: 10px;
   }
 }

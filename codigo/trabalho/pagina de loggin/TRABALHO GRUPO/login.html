@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Infra Esporte - Login</title>
+  <link rel="stylesheet" href="io.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+<body>
+  <div class="page-container">
+    <div class="left-side">
+      <div class="logo">Infra Sports
+      </div>
+      <div class="login-box">
+        <span class="material-icons user-icon">person</span>
+        <h2 class="login-title">Login</h2>
+        <form id="form">
+          <input type="text" id="username" placeholder="Usuário" required />
+          <input type="password" id="password" placeholder="Senha" required />
+          <button type="submit" id="submit-btn">Entrar</button>
+        </form>
+        <div class="forgot-password">
+          <a href="forgot-password.html">Esqueci a senha</a>
+        </div>
+        <div class="login-buttons">
+          <button onclick="location.href='forgot-password.html'">Esqueci a senha</button>
+          <button onclick="location.href='register.html'">Cadastrar</button>
+        </div>
+      </div>
+    </div>
+    <div class="right-side">
+      <div id="extra-info-screen" style="display:none; width: 100%; max-width: 360px; background: #ff6f00; border-radius: 30px; padding: 40px; color: white; box-shadow: 0 0 15px rgba(255,111,0,0.7); font-family: Arial, sans-serif;">
+        <h2 style="text-align: center; margin-bottom: 30px;">Mais algumas informações</h2>
+        <form id="extra-info-form">
+          <label for="cep" style="display: block; margin-bottom: 10px; font-weight: bold;">Qual seu CEP?</label>
+          <input type="text" id="cep" name="cep" placeholder="Digite seu CEP" required style="width: 100%; padding: 12px 15px; border-radius: 25px; border: none; margin-bottom: 20px; font-size: 1em; outline: none;" />
+          
+          <label for="favorite-sport" style="display: block; margin-bottom: 10px; font-weight: bold;">Qual seu esporte favorito?</label>
+          <select id="favorite-sport" name="favorite-sport" required style="width: 100%; padding: 12px 15px; border-radius: 25px; border: none; margin-bottom: 20px; font-size: 1em; outline: none;">
+            <option value="" disabled selected>Selecione um esporte</option>
+            <option value="skate">Skate</option>
+            <option value="ciclismo">Ciclismo</option>
+            <option value="gerais">Gerais</option>
+          </select>
+          
+          <label style="display: flex; align-items: center; gap: 10px; margin-bottom: 30px; font-weight: bold;">
+            <input type="checkbox" id="receive-videos" name="receive-videos" />
+            Quero receber vídeos sobre o esporte e questões
+          </label>
+          
+          <button type="submit" style="width: 100%; padding: 15px; border-radius: 30px; border: none; background-color: #e65c00; color: white; font-weight: bold; font-size: 1.1em; cursor: pointer; box-shadow: 0 4px 8px rgba(230, 92, 0, 0.8); transition: background-color 0.3s ease;">
+            Tire dúvidas aqui
+          </button>
+        </form>
+      </div>
+
+      <div id="profile-photo-screen" style="display:none; width: 100%; max-width: 360px; background: #ff6f00; border-radius: 30px; padding: 40px; color: white; box-shadow: 0 0 15px rgba(255,111,0,0.7); font-family: Arial, sans-serif; text-align: center;">
+        <h2 style="margin-bottom: 30px;">Envie sua foto de perfil</h2>
+        <input type="file" id="profile-photo-input" accept="image/*" style="margin-bottom: 20px; border-radius: 25px; padding: 10px; width: 100%; cursor: pointer;" />
+        <div id="photo-preview-container" style="margin-bottom: 30px;">
+          <img id="photo-preview" src="" alt="Pré-visualização da foto" style="max-width: 100%; max-height: 200px; border-radius: 50%; border: 3px solid white; object-fit: cover; display: none; margin: 0 auto;" />
+        </div>
+        <button id="finalize-btn" style="width: 100%; padding: 15px; border-radius: 30px; border: none; background-color: #e65c00; color: white; font-weight: bold; font-size: 1.1em; cursor: pointer; box-shadow: 0 4px 8px rgba(230, 92, 0, 0.8); transition: background-color 0.3s ease;">
+          Finalizar
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="java.js"></script>
+  <script>
+    const loginForm = document.getElementById('form');
+    const leftSide = document.querySelector('.left-side');
+    const extraInfoScreen = document.getElementById('extra-info-screen');
+    const extraInfoForm = document.getElementById('extra-info-form');
+
+    const profilePhotoScreen = document.getElementById('profile-photo-screen');
+    const profilePhotoInput = document.getElementById('profile-photo-input');
+    const photoPreview = document.getElementById('photo-preview');
+    const finalizeBtn = document.getElementById('finalize-btn');
+
+    loginForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      // Here you could add validation or authentication logic if needed
+
+      // Hide the login form container
+      leftSide.style.display = 'none';
+      // Show the extra info screen
+      extraInfoScreen.style.display = 'block';
+    });
+
+    extraInfoForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      // Hide the extra info screen
+      extraInfoScreen.style.display = 'none';
+      // Show the profile photo upload screen
+      profilePhotoScreen.style.display = 'block';
+    });
+
+    profilePhotoInput.addEventListener('change', function(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          photoPreview.src = e.target.result;
+          photoPreview.style.display = 'block';
+        };
+        reader.readAsDataURL(file);
+      } else {
+        photoPreview.src = '';
+        photoPreview.style.display = 'none';
+      }
+    });
+
+    finalizeBtn.addEventListener('click', function() {
+      alert('Perfil finalizado com sucesso!');
+      // Here you could add logic to submit the photo or proceed further
+    });
+  </script>
+</body>
+</html>

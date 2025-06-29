@@ -16,48 +16,52 @@ body {
 
 /* ==================== CABEÇALHO ==================== */
 .navbar {
-  background-color: #e1690f;
-  padding: 10px 20px;
+  background: linear-gradient(135deg, #f39c12, #e67e22);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 15px 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .nav-left {
-  background: #fff;
-  padding: 8px 16px;
-  border-radius: 8px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
+}
+
+.nav-left img {
+  height: 50px;
+  width: auto;
 }
 
 .logo-text {
-  color: #1a1a1a;
+  font-size: 1.8rem;
   font-weight: bold;
-  font-size: 16px;
+  color: black;
 }
 
 .nav-right {
   list-style: none;
   display: flex;
   gap: 20px;
-  background: #fff;
-  padding: 8px 16px;
-  border-radius: 8px;
 }
 
 .nav-right li a {
-  text-decoration: none;
-  color: #000;
-  font-size: 14px;
+  font-size: 1rem;
   display: flex;
   align-items: center;
-  gap: 5px;
+  color: black;
+  font-weight: 500;
+  transition: opacity 0.3s;
+}
+
+.nav-right li a i {
+  margin-right: 5px;
 }
 
 .nav-right li a:hover {
-  text-decoration: underline;
+  opacity: 0.75;
 }
 
 /* ==================== AVALIAÇÃO ==================== */
@@ -216,31 +220,23 @@ button:focus {
 
 /* ==================== RODAPÉ ==================== */
 .rodape {
-  background: linear-gradient(135deg, #d35400, #e67e22);
+  background: linear-gradient(135deg, #e67e22, #f39c12);
+  color: black;
   padding: 20px 0;
-  display: flex;
-  justify-content: center;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-  margin-top: auto;
+  text-align: center;
+  margin-top: 40px;
 }
 
 .rodape .container {
-  background: white;
-  border-radius: 10px;
-  max-width: 1200px;
-  width: 90%;
-  padding: 15px 25px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .rodape p {
   margin: 0;
   font-size: 0.95rem;
-  color: #333;
 }
 
 .redes-sociais {
