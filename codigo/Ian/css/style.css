@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header, footer {
+  background-color: #ee9300;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  margin: 0 0 15px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.formulario, .exemplo {
+  flex: 1 1 500px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  background-color: #fefefe;
+  transition: border-color 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #ee9300;
+  outline: none;
+}
+
+button {
+  margin-top: 20px;
+  background-color: #ee9300;
+  color: white;
+  border: none;
+  padding: 14px;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #cc7c00;
+}
+
+.mensagem-sucesso {
+  margin-top: 20px;
+  color: #27ae60;
+  font-weight: bold;
+  text-align: center;
+}
+
+.descricao, .importante {
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.descricao {
+  background-color: #fdf0e6;
+  border-left: 6px solid #ee9300;
+  font-family: monospace;
+  white-space: pre-wrap;
+}
+
+.importante {
+  background-color: #fff8e1;
+  border-left: 6px solid #ffc107;
+}
+
+#preview {
+  display: none;
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
