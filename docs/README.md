@@ -321,12 +321,18 @@ Registro dos usuários do sistema utilizados para login e para o perfil do siste
 
 ```json
   {
-    id: "eed55b91-45be-4f2c-81bc-7686135503f9",
-    email: "admin@abc.com",
-    id: "eed55b91-45be-4f2c-81bc-7686135503f9",
-    login: "admin",
-    nome: "Administrador do Sistema",
-    senha: "123"
+usuarios": [
+    {
+    "id": "09f4",
+      "nome": "dfzgersadg",
+      "dataNascimento": "2025-06-26",
+      "endereco": "123",
+      "hobby": "jogar bola",
+      "esporte": "futebol",
+      "email": "vinidssantos38@gmail.com",
+      "login": "vinid",
+      "senha": "12",
+    },
   }
 ```usuarios": [
     {
