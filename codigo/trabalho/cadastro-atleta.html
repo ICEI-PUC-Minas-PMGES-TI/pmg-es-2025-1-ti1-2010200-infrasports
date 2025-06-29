@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>InfraSport - Cadastro do Atleta</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/home-page.css" />
+    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="cadastro-atleta.css" />
+
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-left">
+          <img src="/Logo_InfraSports-sem fundo.png" alt="Logo InfraSport" />
+          <span class="logo-text">InfraSport</span>
+        </div>
+        <ul class="nav-right">
+          <li><a href="/joao_lucca_alves/mapa.html"><i class="fas fa-map"></i> Mapa</a></li>
+          <li><a href="/Gabriel/espaços.html"><i class="fas fa-tree"></i> Espaços</a></li>
+          <li><a href="/Ian/html/Cadas_Local.html"><i class="fas fa-plus-circle"></i> Cadastrar</a></li>
+          <li><a href="/joao_pedro/aval.html"><i class="fas fa-star"></i> Avaliar</a></li>
+          <li><a href="login.html"><i class="fas fa-user"></i> Conta</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <div class="logo-area">
+        <h2><span>Infra</span>Sport - Cadastro do Atleta</h2>
+      </div>
+
+      <section class="cadastro-box">
+        <form id="cadastroAtletaForm">
+          <label for="nome">Nome Completo</label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            required
+            placeholder="Digite seu nome completo"
+          />
+
+          <label for="dataNascimento">Data de Nascimento</label>
+          <input
+            type="date"
+            id="dataNascimento"
+            name="dataNascimento"
+            required
+          />
+
+          <label for="endereco">Endereço</label>
+          <input
+            type="text"
+            id="endereco"
+            name="endereco"
+            required
+            placeholder="Digite seu endereço"
+          />
+
+          <label for="hobby">Hobby</label>
+          <input
+            type="text"
+            id="hobby"
+            name="hobby"
+            placeholder="Digite seu hobby"
+          />
+
+          <label for="esporte">Esporte que Pratica</label>
+          <select id="esporte" name="esporte" required>
+            <option value="" disabled selected>Selecione o esporte</option>
+            <option value="corrida">Corrida</option>
+            <option value="ciclismo">Ciclismo</option>
+            <option value="skateboarding">Skateboarding</option>
+            <option value="calistenia">Calistenia</option>
+            <option value="futebol">Futebol</option>
+            <option value="natação">Natação</option>
+            <option value="outros">Outros</option>
+          </select>
+
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="Digite seu e-mail"
+          />
+
+          <label for="usuario">Nome de Usuário</label>
+          <input
+            type="text"
+            id="usuario"
+            name="usuario"
+            required
+            placeholder="Escolha um nome de usuário"
+          />
+<label for="fotoPerfil">Foto de Perfil</label>
+<input type="file" id="fotoPerfil" name="fotoPerfil" accept="image/*" />
+
+<div id="preview-container">
+  <img id="preview" src="" alt="Prévia da foto" style="display:none; max-width: 150px; margin-top: 10px; border-radius: 50%;" />
+</div>
+
+          <label for="senha">Senha</label>
+          <input
+            type="password"
+            id="senha"
+            name="senha"
+            required
+            placeholder="Digite sua senha"
+          />
+
+          <button type="submit">Cadastrar</button>
+          <p id="mensagemCadastro" class="mensagem-erro"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <div class="container rodape-container">
+        <p>© 2025 InfraSport | Prefeitura de Belo Horizonte | Secretaria de Mobilidade Urbana</p>
+        <div class="redes-sociais">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .getElementById("cadastroAtletaForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // pegar dados do formulário
+          const atleta = {
+            nome: this.nome.value.trim(),
+            dataNascimento: this.dataNascimento.value,
+            endereco: this.endereco.value.trim(),
+            hobby: this.hobby.value.trim(),
+            esporte: this.esporte.value,
+            email: this.email.value.trim(),
+            usuario: this.usuario.value.trim(),
+            senha: this.senha.value,
+          };
+
+          // Aqui você pode fazer a validação, enviar para o JSON Server, LocalStorage, etc
+          // Por enquanto só mostro um alerta de sucesso:
+          alert("Cadastro realizado com sucesso!\n" + JSON.stringify(atleta, null, 2));
+
+          // opcional: limpar formulário
+          this.reset();
+        });
+    </script>
+  </body>
+</html>
