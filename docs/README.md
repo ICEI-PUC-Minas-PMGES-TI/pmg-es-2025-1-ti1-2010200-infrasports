@@ -328,7 +328,14 @@ Registro dos usuários do sistema utilizados para login e para o perfil do siste
     nome: "Administrador do Sistema",
     senha: "123"
   }
-```
+```usuarios": [
+    {
+      "id": "1",
+      "nome": "João Silva",
+      "login": "joaosilva",
+      "senha": "123456",
+      "email": "joao.silva@example.com"
+    },
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
