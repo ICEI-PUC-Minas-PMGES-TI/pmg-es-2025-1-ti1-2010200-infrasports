@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="Cadas.css" />
+  <title>Cadastro de Treino</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <header>
+      <nav class="navbar">
+        <div class="nav-left">
+        <img src="Logo_InfraSports-sem fundo.png" alt="">
+          <span class="logo-text"></span>
+        </div>
+        <ul class="nav-right">
+          <li><a href="mapa.html"><i class="fas fa-map"></i> Mapa</a></li>
+          <li><a href="espacos.html"><i class="fas fa-tree"></i> Espaços</a></li>
+          <li><a href="cadastro.html"><i class="fas fa-plus-circle"></i> Cadastrar</a></li>
+          <li><a href="joao_pedro/aval.html"><i class="fas fa-star"></i> Avaliar</a></li>
+          <li><a href="login.html"><i class="fas fa-user"></i> Conta</a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+
+  <main>
+    <h2>Cadastro de treino: Ciclistas</h2>
+    <form class="form-box" id="form-treino">
+      <label>Título do treino
+        <input type="text" name="titulo" placeholder="Ex: Treino de resistência" required>
+      </label>
+
+      <div class="row">
+        <label>Data e hora
+          <input type="datetime-local" name="data_hora" required>
+        </label>
+        <label>Tipo de treino
+          <input type="text" name="tipo_treino" placeholder="Ex: Subida" required>
+        </label>
+      </div>
+
+      <div class="row">
+        <label>Distância (km)
+          <input type="number" name="distancia" placeholder="Ex: 20" required>
+        </label>
+        <label>Duração estimada (min)
+          <input type="text" name="duracao" placeholder="Ex: 60 minutos" required>
+        </label>
+        <label>Altimetria (m)
+          <input type="number" name="altimetria" placeholder="Ex: 250" required>
+        </label>
+      </div>
+
+      <label>Frequência cardíaca alvo (opcional)
+        <input type="text" name="frequencia" placeholder="Ex: 140 bpm">
+      </label>
+
+      <label>Intensidade
+        <input type="text" name="intensidade" placeholder="Ex: Moderada" required>
+      </label>
+
+      <label>Observações
+        <textarea name="observacoes" placeholder="Inclua informações adicionais..." rows="4"></textarea>
+      </label>
+
+      <button type="submit">Cadastrar Treino</button>
+    </form>
+
+    <!-- Mensagem de sucesso -->
+    <div id="msg-sucesso" style="display:none; color: green; margin-top: 15px; font-weight: bold;">
+      Treino cadastrado com sucesso!
+    </div>
+  </main>
+
+  <footer class="rodape">
+      <div class="container rodape-container">
+        <p>© 2025 InfraSports | Prefeitura de Belo Horizonte | Secretaria de Mobilidade Urbana</p>
+        <div class="redes-sociais">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </footer>
+
+
+  <!-- Seu script principal -->
+  <script src="cadas.js"></script>
+</body>
+</html>

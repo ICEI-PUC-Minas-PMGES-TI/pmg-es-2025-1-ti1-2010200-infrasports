@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding: 30px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  margin-top: 4px;
+}
+
+.row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1;
+  min-width: 200px;
+}
+
+button[type="submit"] {
+  background-color: #e1690f;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #d45c00;
+}
+
+/* Mensagem de sucesso */
+#msg-sucesso {
+  display: none;
+  color: green;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+/* NAVBAR */
+.navbar {
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-left img {
+  height: 50px;
+  width: auto;
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: black;
+}
+
+.nav-right {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-right li a {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  color: black;
+  font-weight: 500;
+  transition: opacity 0.3s;
+}
+
+.nav-right li a i {
+  margin-right: 5px;
+}
+
+.nav-right li a:hover {
+  opacity: 0.75;
+}
+/* RODAPÉ */
+.rodape {
+  background: linear-gradient(135deg, #e67e22, #f39c12);
+  color: black;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.rodape .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.rodape p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.redes-sociais {
+  display: flex;
+  gap: 15px;
+}
+
+.redes-sociais a {
+  color: black;
+  font-size: 1.2rem;
+  transition: transform 0.3s;
+}
+
+.redes-sociais a:hover {
+  transform: translateY(-3px);
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar, .rodape .container {
+    flex-direction: column;
+    text-align: center;
+  }
+}

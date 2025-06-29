@@ -1,0 +1,103 @@
+/* Container da caixa de login */
+.login-box {
+  background: #fff7f0; /* mesma cor das cards */
+  border: 2px solid #f39c12;
+  border-radius: 12px;
+  padding: 30px 40px;
+  max-width: 400px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Título da seção login */
+.login-box h2 {
+  color: #e67e22;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* Formulário */
+.login-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.login-box label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+  font-size: 1rem;
+}
+
+/* Inputs */
+.login-box input[type="text"],
+.login-box input[type="password"] {
+  padding: 10px 15px;
+  border: 2px solid #f39c12;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.login-box input[type="text"]:focus,
+.login-box input[type="password"]:focus {
+  border-color: #e67e22;
+  outline: none;
+}
+
+/* Botão Entrar */
+.login-box button {
+  background-color: #e67e22;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-box button:hover {
+  background-color: #f39c12;
+}
+
+/* Mensagem de erro */
+.erro-login {
+  color: #d9534f; /* vermelho suave */
+  font-weight: 600;
+  text-align: center;
+  margin-top: 10px;
+  min-height: 20px; /* garante espaço mesmo sem mensagem */
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .login-box {
+    padding: 20px 25px;
+    margin: 30px 15px;
+  }
+}
+.login-links {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.login-links a {
+  font-size: 0.9rem;
+  color: #ee9300;
+  text-decoration: none;
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+}
+
+.cadastro-link {
+  font-weight: bold;
+}

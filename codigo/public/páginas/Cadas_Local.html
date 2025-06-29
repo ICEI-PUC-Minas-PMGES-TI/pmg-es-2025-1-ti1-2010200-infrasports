@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Local</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Cadastro de Local</h1>
+  </header>
+
+  <div class="container">
+    <section class="formulario">
+      <h2>Cadastrar Novo Local</h2>
+      <form id="form-local">
+        <label for="nome">Nome do local *</label>
+        <input type="text" id="nome" required />
+
+        <label for="endereco">Endereço *</label>
+        <input type="text" id="endereco" required />
+
+        <label for="tipo">Tipo de espaço *</label>
+        <select id="tipo" required>
+          <option value="">Selecione</option>
+          <option value="Quadra">Quadra</option>
+          <option value="Campo">Campo</option>
+          <option value="Ginásio">Ginásio</option>
+          <option value="Outro">Outro</option>
+        </select>
+
+        <label for="descricao">Descrição</label>
+        <textarea id="descricao" rows="4" placeholder="Detalhes do local"></textarea>
+
+        <label for="horario">Horário de funcionamento *</label>
+        <input type="text" id="horario" placeholder="Ex: 08:00 às 18:00" required />
+
+        <label for="imagem">Imagem do Local (arquivo)</label>
+        <input type="file" id="imagem" accept="image/*" />
+        <img id="preview" />
+
+        <label for="contato">Contato (telefone ou e-mail) *</label>
+        <input type="text" id="contato" required />
+
+        <button type="submit">Cadastrar Local</button>
+        <p class="mensagem-sucesso" id="mensagem"></p>
+      </form>
+    </section>
+
+    <section class="exemplo">
+      <h2>🧾 Exemplo de Descrição do Local</h2>
+      <div class="descricao">
+Parque natural com lago artificial e pista circular de 1,5km, ideal para caminhadas e piqueniques. O local possui áreas gramadas e espaços sombreados por árvores.
+
+Tipo: Parque Urbano  
+Localização: Campinas - SP  
+Horário de Funcionamento: 05:00 às 21:00  
+
+Infraestrutura:  
+✓ Estacionamento  
+✓ Bebedouro  
+✓ Banheiros  
+✓ Área para piquenique  
+✓ Iluminação noturna  
+
+Acessibilidade:  
+✓ Rampa de acesso  
+✓ Piso tátil nas entradas principais  
+✓ Banheiro adaptado
+      </div>
+      <div class="importante">
+        <strong>➡ Importante:</strong> Use um espaço real, mas mantenha todas as informações completas e úteis para quem vai utilizar o local.
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 - Cadastro de Locais</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('form-local');
+    const imagemInput = document.getElementById('imagem');
+    const preview = document.getElementById('preview');
+    const mensagem = document.getElementById('mensagem');
+
+    imagemInput.addEventListener('change', () => {
+      const file = imagemInput.files[0];
+      if (file && file.type.startsWith('image/')) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          preview.src = e.target.result;
+          preview.style.display = 'block';
+        };
+        reader.readAsDataURL(file);
+      } else {
+        preview.style.display = 'none';
+        preview.src = '';
+      }
+    });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
+      if (!usuarioCorrenteJSON) {
+        alert('Você precisa estar logado para cadastrar um local.');
+        return;
+      }
+
+      const usuarioCorrente = JSON.parse(usuarioCorrenteJSON);
+      const file = imagemInput.files[0];
+
+      const salvarLocal = async (imagemBase64) => {
+        const local = {
+          nome: document.getElementById('nome').value.trim(),
+          endereco: document.getElementById('endereco').value.trim(),
+          tipo: document.getElementById('tipo').value,
+          descricao: document.getElementById('descricao').value.trim(),
+          horario: document.getElementById('horario').value.trim(),
+          imagem: imagemBase64 || '',
+          contato: document.getElementById('contato').value.trim(),
+          usuarioId: usuarioCorrente.id
+        };
+
+        if (!local.nome || !local.endereco || !local.tipo || !local.horario || !local.contato) {
+          alert('Preencha todos os campos obrigatórios!');
+          return;
+        }
+
+        try {
+          const response = await fetch('http://localhost:3000/espacos', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(local)
+          });
+
+          if (!response.ok) throw new Error('Erro ao cadastrar local.');
+
+          mensagem.textContent = '✅ Local cadastrado com sucesso!';
+          form.reset();
+          preview.style.display = 'none';
+          preview.src = '';
+
+          setTimeout(() => mensagem.textContent = '', 3000);
+        } catch (error) {
+          alert('Erro ao cadastrar local: ' + error.message);
+        }
+      };
+
+      if (file && file.type.startsWith('image/')) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          salvarLocal(e.target.result);
+        };
+        reader.readAsDataURL(file);
+      } else {
+        salvarLocal('');
+      }
+    });
+  </script>
+</body>
+</html>

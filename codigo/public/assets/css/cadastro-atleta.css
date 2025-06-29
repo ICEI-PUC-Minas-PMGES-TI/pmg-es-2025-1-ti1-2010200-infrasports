@@ -1,0 +1,79 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logo-area h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #333;
+}
+
+.logo-area span {
+  color: #ee9300;
+}
+
+.cadastro-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.cadastro-box label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.cadastro-box input,
+.cadastro-box select {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.cadastro-box button {
+  background-color: #ee9300;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cadastro-box button:hover {
+  background-color: #cc7c00;
+}
+
+.mensagem-erro {
+  color: red;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 20px;
+    padding: 20px;
+  }
+}
+#preview-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

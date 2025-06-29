@@ -1,15 +1,3 @@
-// Trabalho Interdisciplinar 1 - Aplicações Web
-//
-// Esse módulo realiza o registro de novos usuários e login para aplicações com 
-// backend baseado em API REST provida pelo JSONServer
-// Os dados de usuário estão localizados no arquivo db.json que acompanha este projeto.
-//
-// Autor: Rommel Vieira Carneiro (rommelcarneiro@gmail.com)
-// Data: 09/09/2024
-//
-// Código LoginApp  
-
-
 // Página inicial de Login
 const LOGIN_URL = "/modulos/login/login.html";
 let RETURN_URL = "/modulos/login/index.html";
@@ -100,13 +88,19 @@ function logoutUser () {
     sessionStorage.removeItem ('usuarioCorrente');
     window.location = LOGIN_URL;
 }
+function addUser(nome, login, senha, email, dataNascimento, endereco, hobby, esporte, fotoPerfil) {
+    let usuario = {
+        nome: nome,
+        login: login,
+        senha: senha,
+        email: email,
+        dataNascimento: dataNascimento,
+        endereco: endereco,
+        hobby: hobby,
+        esporte: esporte,
+        fotoPerfil: fotoPerfil
+    };
 
-function addUser (nome, login, senha, email) {
-
-    // Cria um objeto de usuario para o novo usuario 
-    let usuario = { "login": login, "senha": senha, "nome": nome, "email": email };
-
-    // Envia dados do novo usuário para ser inserido no JSON Server
     fetch(API_URL, {
         method: 'POST',
         headers: {
@@ -114,25 +108,13 @@ function addUser (nome, login, senha, email) {
         },
         body: JSON.stringify(usuario),
     })
-        .then(response => response.json())
-        .then(data => {
-            // Adiciona o novo usuário na variável db_usuarios em memória
-            db_usuarios.push (usuario);
-            displayMessage("Usuário inserido com sucesso");
-        })
-        .catch(error => {
-            console.error('Erro ao inserir usuário via API JSONServer:', error);
-            displayMessage("Erro ao inserir usuário");
-        });
+    .then(response => response.json())
+    .then(data => {
+        db_usuarios.push(usuario);
+        alert("Cadastro realizado com sucesso!");
+    })
+    .catch(error => {
+        console.error('Erro ao inserir usuário via API JSONServer:', error);
+        alert("Erro ao cadastrar usuário.");
+    });
 }
-
-function showUserInfo (element) {
-    var elemUser = document.getElementById(element);
-    if (elemUser) {
-        elemUser.innerHTML = `${usuarioCorrente.nome} (${usuarioCorrente.login}) 
-                    <a onclick="logoutUser()">❌</a>`;
-    }
-}
-
-// Inicializa as estruturas utilizadas pelo LoginApp
-initLoginApp ();
