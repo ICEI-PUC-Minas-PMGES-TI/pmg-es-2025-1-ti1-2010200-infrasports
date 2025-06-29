@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Detalhes do Espaço</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/detalhes.js" defer></script>
+</head>
+<body>
+    <!-- Cabeçalho simples -->
+    <header>
+        <h1 id="nome-espaco"></h1>
+    </header>
+
+    <main>
+        <!-- Imagem + frase e logo lado a lado -->
+        <div class="imagem-e-marca">
+            <img id="imagem-espaco" src="" alt="Imagem do espaço" />
+            <div class="registrado-infrasport">
+                <span class="texto-registrado">Espaço registrado pela InfraSport</span>
+                <img src="assets/img/logo-infrasport.png" alt="Logo InfraSport" class="logo-infrasport-lateral" />
+            </div>
+        </div>
+
+        <!-- Informações gerais -->
+        <p id="descricao-espaco"></p>
+        <p><strong>Tipo:</strong> <span id="tipo-espaco"></span></p>
+        <p><strong>Localização:</strong> <span id="localizacao-espaco"></span></p>
+        <p><strong>Horário de Funcionamento:</strong> <span id="horario-espaco"></span></p>
+        <p>
+            <strong>Avaliação:</strong>
+            <span id="avaliacao-espaco"></span>
+            <span id="estrela-avaliacao">⭐</span>
+        </p>
+
+        <!-- Infraestrutura e acessibilidade -->
+        <h3>Infraestrutura</h3>
+        <ul id="infraestrutura-espaco"></ul>
+
+        <h3>Acessibilidade</h3>
+        <ul id="acessibilidade-espaco"></ul>
+
+        <!-- Slideshow condicional -->
+        <div class="slideshow-container" id="slideshow" style="display: none;">
+            <img
+                id="imagem-slide"
+                src=""
+                alt="Imagem do Parque das Mangabeiras"
+                class="slide-imagem"
+            />
+            <button class="botao-slide esquerda" onclick="trocarSlide(-1)">&#10094;</button>
+            <button class="botao-slide direita" onclick="trocarSlide(1)">&#10095;</button>
+        </div>
+
+        <!-- Temperatura -->
+        <div id="temperatura-container" class="info-temperatura" style="margin-top: 30px;">
+            <p><strong>Temperatura em BH:</strong> <span id="temperatura">--</span>°C</p>
+            <p><strong>Condição:</strong> <span id="condicao">--</span></p>
+        </div>
+    </main>
+</body>
+</html>

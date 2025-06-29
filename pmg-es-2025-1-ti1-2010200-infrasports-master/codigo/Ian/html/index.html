@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Local</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+
+  <header class="cabecalho">
+    <div class="container">
+      <div class="logo">
+        <h1>Cadastro de Local</h1>
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="#">Início</a></li>
+          <li><a href="#">Locais</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+    <!-- Conteúdo principal -->
+
+  <main class="container">
+    <h1>Cadastrar Novo Local</h1>
+    <form id="form-local">
+      <label for="nome">Nome do local *</label>
+      <input type="text" id="nome" required />
+      
+      <label for="endereco">Endereço *</label>
+      <input type="text" id="endereco" required />
+
+      <label for="tipo">Tipo de espaço *</label>
+      <select id="tipo" required>
+        <option value="">Selecione</option>
+        <option value="Quadra">Quadra</option>
+        <option value="Campo">Campo</option>
+        <option value="Ginásio">Ginásio</option>
+        <option value="Outro">Outro</option>
+      </select>
+
+      <label for="descricao">Descrição</label>
+      <textarea id="descricao" rows="4" placeholder="Detalhes do local"></textarea>
+
+      <label for="horario">Horário de funcionamento *</label>
+      <input type="text" id="horario" placeholder="Ex: 08:00 às 18:00" required />
+
+      <label for="imagem">Imagem do Local (arquivo)</label>
+      <input type="file" id="imagem" accept="image/*" />
+      <div id="preview-container">
+        <img id="preview" style="display:none; width: 100%; max-height: 250px; object-fit: cover; border-radius: 8px; margin-top: 10px;" />
+      </div>
+
+      <label for="contato">Contato (telefone ou e-mail) *</label>
+      <input type="text" id="contato" required />
+
+      <button type="submit">Cadastrar Local</button>
+      <p class="mensagem-sucesso" id="mensagem"></p>
+    </form>
+  </main>
+
+    <!-- Rodapé -->
+  <footer class="rodape">
+    <div class="container">
+      <p>&copy; 2025 Projeto de Locais. Todos os direitos reservados.</p>
+      <div class="redes-sociais">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    const form = document.getElementById('form-local');
+    const imagemInput = document.getElementById('imagem');
+    const preview = document.getElementById('preview');
+    const mensagem = document.getElementById('mensagem');
+
+    imagemInput.addEventListener('change', () => {
+      const file = imagemInput.files[0];
+      if (file && file.type.startsWith('image/')) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          preview.src = e.target.result;
+          preview.style.display = 'block';
+        };
+        reader.readAsDataURL(file);
+      } else {
+        preview.style.display = 'none';
+        preview.src = '';
+      }
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const file = imagemInput.files[0];
+
+      const salvarLocal = (imagemBase64) => {
+        const local = {
+          nome: document.getElementById('nome').value.trim(),
+          endereco: document.getElementById('endereco').value.trim(),
+          tipo: document.getElementById('tipo').value,
+          descricao: document.getElementById('descricao').value.trim(),
+          horario: document.getElementById('horario').value.trim(),
+          imagem: imagemBase64 || '',
+          contato: document.getElementById('contato').value.trim()
+        };
+
+        if (!local.nome || !local.endereco || !local.tipo || !local.horario || !local.contato) {
+          alert('Preencha todos os campos obrigatórios!');
+          return;
+        }
+
+        const locais = JSON.parse(localStorage.getItem('locais')) || [];
+        locais.push(local);
+        localStorage.setItem('locais', JSON.stringify(locais));
+
+        mensagem.textContent = 'Local cadastrado com sucesso!';
+        form.reset();
+        preview.style.display = 'none';
+        preview.src = '';
+
+        setTimeout(() => mensagem.textContent = '', 3000);
+      };
+
+      if (file && file.type.startsWith('image/')) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          salvarLocal(e.target.result);
+        };
+        reader.readAsDataURL(file);
+      } else {
+        salvarLocal('');
+      }
+    });
+  </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Descrição do Local - Personalizada</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .cabecalho, .rodape {
+      background-color: #ff6f00;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .rodape {
+      border-radius: 0 0 10px 10px;
+      font-size: 14px;
+      margin-top: 30px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-top: 30px;
+      color: #ff6f00;
+    }
+
+    .descricao {
+      background-color: #fdf0e6;
+      border-left: 5px solid #ff6f00;
+      padding: 15px;
+      font-family: monospace;
+      white-space: pre-wrap;
+    }
+
+    .importante {
+      background-color: #fff3cd;
+      border-left: 5px solid #ffc107;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="cabecalho">
+      <h1>✏ Tarefa: Personalize a Descrição do Local</h1>
+    </div>
+
+    <p>
+      Agora que você já tem um modelo de descrição, sua tarefa é criar uma nova versão personalizada, substituindo o exemplo original por um conteúdo próprio.
+    </p>
+
+    <h2>🧾 Nova Descrição Criada:</h2>
+    <div class="descricao">
+Parque natural com lago artificial e pista circular de 1,5km, ideal para caminhadas e piqueniques. O local possui áreas gramadas e espaços sombreados por árvores.
+
+Tipo: Parque Urbano  
+Localização: Campinas - SP  
+Horário de Funcionamento: 05:00 às 21:00  
+
+Infraestrutura:  
+✓ Estacionamento  
+✓ Bebedouro  
+✓ Banheiros  
+✓ Área para piquenique  
+✓ Iluminação noturna  
+
+Acessibilidade:  
+✓ Rampa de acesso  
+✓ Piso tátil nas entradas principais  
+✓ Banheiro adaptado
+    </div>
+
+    <div class="importante">
+      <strong>➡ Importante:</strong> Use um espaço real ou fictício, mas mantenha todas as informações completas e úteis para quem vai utilizar o local.
+    </div>
+
+    <div class="rodape">
+      © 2025 - Cadastro de Locais
+    </div>
+  </div>
+
+</body>
+</html>
