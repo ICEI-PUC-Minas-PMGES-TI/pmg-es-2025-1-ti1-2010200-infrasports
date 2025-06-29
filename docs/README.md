@@ -1,4 +1,4 @@
-# Introdução
+![image](https://github.com/user-attachments/assets/88e99269-cfbe-4cb7-84d1-f6aa8aac7cc8)# Introdução
 
 Informações básicas do projeto.
 
@@ -347,6 +347,11 @@ usuarios": [
 ## Módulos e APIs
 
 Esta seção apresenta os módulos e APIs utilizados na solução
+
+ A API usada foi o  (OpenStreetMap):
+![image](https://github.com/user-attachments/assets/be14b222-1370-42cf-82b8-f85b067ef45f)
+
+
 
 **Images**:
 
