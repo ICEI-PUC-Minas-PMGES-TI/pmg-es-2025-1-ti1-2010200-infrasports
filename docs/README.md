@@ -1,4 +1,4 @@
-# Introdução
+![image](https://github.com/user-attachments/assets/88e99269-cfbe-4cb7-84d1-f6aa8aac7cc8)# Introdução
 
 Informações básicas do projeto.
 
@@ -282,17 +282,16 @@ Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
 * **Estrutura de dados:** [Contatos](#ti_ed_contatos)
 * **Instruções de acesso:**
   * Abra o site e efetue o login
-  * Acesse o menu principal e escolha a opção Cadastros
-  * Em seguida, escolha a opção Contatos
-* **Tela da funcionalidade**:
+  
+![image](https://github.com/user-attachments/assets/11be9ee5-73ff-47f2-99c6-5428c06095fe)
 
-![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente cada uma das funcionalidades que a aplicação fornece tanto para os usuários quanto aos administradores da solução.
->
-> Inclua, para cada funcionalidade, itens como: (1) titulos e descrição da funcionalidade; (2) Estrutura de dados associada; (3) o detalhe sobre as instruções de acesso e uso.
+  * abra o mapa
+  * ![image](https://github.com/user-attachments/assets/83860182-998a-4dbb-9ba8-177fce5f02d6)
+  * e procura o local para relizar seu esporte 
+
+
+
 
 ## Estruturas de Dados
 
@@ -321,29 +320,38 @@ Registro dos usuários do sistema utilizados para login e para o perfil do siste
 
 ```json
   {
-    id: "eed55b91-45be-4f2c-81bc-7686135503f9",
-    email: "admin@abc.com",
-    id: "eed55b91-45be-4f2c-81bc-7686135503f9",
-    login: "admin",
-    nome: "Administrador do Sistema",
-    senha: "123"
+usuarios": [
+    {
+    "id": "09f4",
+      "nome": "dfzgersadg",
+      "dataNascimento": "2025-06-26",
+      "endereco": "123",
+      "hobby": "jogar bola",
+      "esporte": "futebol",
+      "email": "vinidssantos38@gmail.com",
+      "login": "vinid",
+      "senha": "12",
+    },
   }
-```
+```usuarios": [
+    {
+      "id": "1",
+      "nome": "João Silva",
+      "login": "joaosilva",
+      "senha": "123456",
+      "email": "joao.silva@example.com"
+    },
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente as estruturas de dados utilizadas na solução tanto para dados utilizados na essência da aplicação quanto outras estruturas que foram criadas para algum tipo de configuração
->
-> Nomeie a estrutura, coloque uma descrição sucinta e apresente um exemplo em formato JSON.
->
-> **Orientações:**
->
-> * [JSON Introduction](https://www.w3schools.com/js/js_json_intro.asp)
-> * [Trabalhando com JSON - Aprendendo desenvolvimento web | MDN](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Objects/JSON)
+
 
 ## Módulos e APIs
 
 Esta seção apresenta os módulos e APIs utilizados na solução
+
+ A API usada foi o  (OpenStreetMap):
+![image](https://github.com/user-attachments/assets/be14b222-1370-42cf-82b8-f85b067ef45f)
+
+
 
 **Images**:
 
