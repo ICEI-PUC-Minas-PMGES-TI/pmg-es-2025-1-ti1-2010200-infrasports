@@ -240,13 +240,93 @@ Relação de ferramentas empregadas pelo grupo durante o projeto.
 Divisão de papéis no grupo e apresentação da estrutura da ferramenta de controle de tarefas (Kanban).
 
 ![Exemplo de Kanban](images/exemplo-kanban.png)
+Entendimento do Problema
+Objetivo do Projeto:
+Criar uma plataforma digital (site e/ou aplicativo) que permita aos usuários localizar facilmente locais públicos e privados para a prática de esportes em sua cidade ou região.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Nesta parte do documento, você deve apresentar  o processo de trabalho baseado nas metodologias ágeis, a divisão de papéis e tarefas, as ferramentas empregadas e como foi realizada a gestão de configuração do projeto via GitHub.
->
-> Coloque detalhes sobre o processo de Design Thinking e a implementação do Framework Scrum seguido pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
->
+Problema Identificado:
+Muitas pessoas querem praticar esportes, mas têm dificuldade em encontrar locais adequados, seguros e com informações atualizadas.
+
+2. Pesquisa com Usuários (Descoberta)
+Métodos Usados:
+
+Entrevistas com praticantes de esportes (ciclistas, skatistas, marombeiros, etc.).
+
+Questionários online.
+
+Observação de comentários em grupos e fóruns esportivos.
+
+Principais Descobertas:
+
+Usuários querem saber onde e como praticar.
+
+Preferem locais gratuitos, próximos e seguros.
+
+Desejam avaliações e fotos reais do local.
+
+3. Definição de Personas
+Persona 1: João, 20 anos – Estudante universitário
+
+Pratica skate e musculação em praças.
+
+Quer economizar tempo procurando pistas próximas.
+
+Persona 2: Carla, 32 anos – Mãe e corredora casual
+
+Corre aos fins de semana.
+
+Procura parques com pista de corrida e segurança.
+
+4. Mapeamento da Jornada do Usuário
+Etapa	Ação do Usuário	Dor/Ponto Fraco	Oportunidade
+Descoberta	Quer fazer atividade física	Não sabe onde ir	Oferecer busca por localização
+Exploração	Pesquisa em redes sociais ou Google	Informações incompletas/desatualizadas	Centralizar dados atualizados
+Decisão	Escolhe um local	Dúvida sobre segurança ou estrutura	Mostrar fotos, avaliações e mapa
+Ação	Vai até o local	Pode estar fechado ou lotado	Mostrar horários, comentários
+
+5. Requisitos Funcionais
+Mapa
+Busca por tipo de esporte.
+
+
+Cadastro de novos locais pela comunidade.
+
+Sistema de avaliação e comentários.
+
+
+6. Wireframes (Protótipos de baixa fidelidade)
+Página inicial com campo de busca.
+
+Lista de locais com miniaturas e avaliações.
+
+Tela de detalhes com mapa, fotos, horário, avaliações.
+
+Tela de adicionar novo local.
+
+(Obs: caso queira, posso desenhar os wireframes em imagem.)
+
+7. Protótipo Interativo
+Desenvolvido no Figma/Adobe XD.
+
+Simula as funcionalidades principais para testes com usuários.
+
+8. Testes com Usuários
+Aplicação de testes com 5 usuários reais.
+
+
+Coleta de feedback (o que funciona bem e o que precisa melhorar).
+
+9. Iteração
+Ajustes no protótipo com base no feedback.
+
+Melhorias em usabilidade, layout e fluxos.
+
+10. Entrega e Validação
+Implementação do MVP (mínimo produto viável).
+
+Lançamento beta com usuários reais.
+
+
 > **Orientações**:
 >
 > - [Sobre Projects - GitHub Docs](https://docs.github.com/pt/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
