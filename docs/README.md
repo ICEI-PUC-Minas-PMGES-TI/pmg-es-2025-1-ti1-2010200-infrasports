@@ -265,6 +265,10 @@ O vídeo a seguir traz uma apresentação do problema que a equipe está tratand
 
 [![Vídeo do projeto](images/video.png)](https://www.youtube.com/embed/70gGoFyGeqQ)
 
+
+https://github.com/user-attachments/assets/4c142bd0-6444-4611-b35b-e9eb46881353
+
+
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
 > O video de apresentação é voltado para que o público externo possa conhecer a solução. O formato é livre, sendo importante que seja apresentado o problema e a solução numa linguagem descomplicada e direta.
